@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parte1</title>
+</head>
+<style>
+    
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap');
+/*font-family: 'Roboto Condensed', sans-serif;*/
+
+
+#ultimo + div{
+    visibility: hidden;
+}
+#fondo {
+    background: url("/src/1.jpg");
+    margin: 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+body{
+    margin: 0;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    /*animation: animate 1s linear infinite;*/
+}
+
+/*@keyframes animate  {
+    0%{
+        filter: hue-rotate(0deg);
+    }
+    100%{
+        filter: hue-rotate(360deg);
+    }
+}*/
+html{
+    font-size: 18px;
+    font-family: 'Roboto Condensed';
+
+    @media screen and (max-width: 400px){
+        font-size: 15px;
+    }
+
+}
+.contenedor{
+    height: 100vh;
+    width: 100%;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    z-index: 2;
+}
+.pregunta{
+    background-color: rgba(0, 0, 0, 0.247);
+    margin-top: 10%;
+    color: antiquewhite;
+    text-shadow: 0 0 15px black;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    width: auto;
+    height: auto;
+    padding: 1rem;
+    margin: 2rem;
+    text-decoration: none;
+    border-radius: 2rem;
+}
+.pregunta a, .pregunta p{
+    font-size: 1.3rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: beige;
+    text-shadow: 0 0 15px black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+}
+.opciones{
+    position: absolute;
+    bottom:  20%;
+    width: 70%;
+
+}
+.opcion1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 45%;
+    height: 60px;
+    float: left;
+}
+
+.opcion2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 45%;
+    height: 60px;
+    float: right;
+}
+#boton1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: rgb(249, 250, 253);
+    text-shadow: 0 0 10px black;
+    text-decoration: none;
+    background-color: rgba(9, 204, 243, 0.552);
+    width: 90%;
+    height: 100%;
+    border-radius: 10px;
+    border: 2px;
+    border-color: black;
+    font-size: 1rem;
+    }
+
+#boton2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    text-shadow: 0 0 10px black;
+    text-decoration: none;
+    background-color: rgba(221, 113, 11, 0.664);
+    width: 90%;
+    height: 100%;
+    border-radius: 10px;
+    border: 2px;
+    border-color: black;
+    font-size: 1rem;
+}
+
+video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-height: 100vh;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.capa {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #1c1c1d;
+    opacity: 0.5;
+    mix-blend-mode: overlay;
+
+}
+/*Especifico Hero*/
+#hero {
+    min-height: 100%;
+    position: relative;
+    display: flex;
+}
+/*Especifico Hero2*/
+#Hero2 {
+    margin: 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    position: relative;
+    display: none; 
+}
+#conCancion{
+    background-color: rgba(145, 6, 138, 0.623);
+    border: .1rem solid rgb(0, 242, 250);
+}
+/*Especifico Hero3*/
+#Hero3 {
+    min-height: 100vh;
+    position: relative;
+    display: none;
+    
+}
+/*Especifico Hero4*/
+#Hero4 {
+    min-height: 100vh;
+    position: relative;
+    display: none;
+    
+}
+/*Especifico Hero5*/
+#Hero5 {
+    min-height: 100vh;
+    position: relative;
+    display: none;
+    
+}
+/*Especifico Hero6*/
+#Hero6 {
+    min-height: 100vh;
+    position: relative;
+    display: none;
+    
+}
+/*Especifico Hero7*/
+#Hero7 {
+    min-height: 100vh;
+    position: relative;
+    display: none;
+}
+#conCancion{
+    background-color: rgba(65, 7, 173, 0.623);
+    border: .1rem solid rgb(0, 242, 250);
+}
+/*Especifico Hero8*/
+#Hero8 {
+    min-height: 100vh;
+    position: relative;
+    display: none;
+    
+}
+/*Especifico Hero9*/
+#Hero9 {
+    min-height: 100vh;
+    position: relative;
+    display: none;
+
+}
+#sueño {
+    position: absolute;
+    top: 25%;
+    display: none;
+    border-radius: 20px;
+    box-sizing: border-box;
+    padding: 10px;
+    width: 0%;
+    height: 35%;
+    background: linear-gradient(rgba(255, 94, 0, 0.6), rgb(255, 136, 0, 0.6), rgb(225, 0, 255, 0.6), rgb(76, 0, 255, 0.6));
+    font-family: 'Roboto Condensed';
+    font-size: 1rem;
+    color: aliceblue;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    text-align: center;
+    animation: sueños 1s forwards;
+}
+
+@keyframes sueños{
+   100%{
+      width: 85%
+}
+}
+
+#exitsueños{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: rgb(249, 250, 253);
+    text-decoration: none;
+    background-color: rgba(9, 204, 243, 0.552);
+    width: 90%;
+    height: 100%;
+    border-radius: 10px;
+    border: 2px;
+    border-color: black;
+    }
+#soñar {
+    background-color: rgba(6, 15, 145, 0.623);
+    border: .1rem solid rgb(0, 242, 250);
+}
+</style>
+<body id="fondo">
+    <div id="Hero">
+        <div class="contenedor">
+            <div class="pregunta"> <a href="https://www.youtube.com/watch?v=J8OiSixFxNE&ab_channel=BLAKE" target="_blank">
+                ¿Qué fue lo primero que pensaste al despertar?</a></div>
+            <div class="opciones">
+                <div class="opcion1"> 
+                    <button id="boton1" onclick="mostrarHero2();"> <h4>No recuerdo</h4></a></button>
+                </div>    
+                <div class="opcion2">
+                    <button id="boton2" onclick="mostrarHero3();"> <h4>Ya me acordé</h4></a></button>
+                </div>    
+            </div>
+        </div>
+        <video muted autoplay loop 
+            src="/src/Despertar.mp4" type="video/mp4">
+        </video>
+        <div class="capa"></div>
+    </div>
+    <!-- Primera división-->
+    <div id="Hero2">
+        <div class="contenedor">
+            <div id="conCancion" class="pregunta"> <a target="_blank" href="https://www.youtube.com/watch?v=tDry2XAnh9E&ab_channel=TodoLetrasAbout">¿Por qué no lo recuerdas?</a></div>
+            <div class="opciones">
+                <div class="opcion1"> 
+                    <button id="boton1" onclick="mostrarHero();"> <h4>No sé</h4></a></button>
+                </div>    
+                <div class="opcion2">
+                    <button id="boton2" onclick="mostrarHero3();"> <h4>No me importa</h4></a></button>
+                </div>    
+            </div>
+        </div>
+        <!--<video muted autoplay loop 
+            src="/src/Despertar.mp4" type="video/mp4">
+        </video> -->
+        <div class="capa"></div>
+    </div>
+    <!-- Segunda división-->
+    <div id="Hero3">
+        <div class="contenedor">
+            <div class="pregunta"> <p>¿Crees que podría ser importante lo primero que piensas al despertar?</p></div>
+            <div class="opciones">
+                <div class="opcion1"> 
+                    <button id="boton1" onclick="mostrarHero4();"> <h4>Sí</h4></a></button>
+                </div>    
+                <div class="opcion2">
+                    <button id="boton2" onclick="mostrarHero2();"> <h4>No</h4></a></button>
+                </div>    
+            </div>
+        </div>
+        <!--<video muted autoplay loop 
+            src="/src/add_a snake.mp4 y arte, in the style of still from a retrofuturistic film, Lofi steampunk, cinematic focus, realistic, highly detailed, masterpiece, by albert robida.mp4" type="video/mp4">
+        </video>-->
+        <div class="capa"></div>
+    </div>
+    <!-- Tercera división-->
+    <div id="Hero4">
+        <div class="contenedor">
+            <div class="pregunta"> <p>¿Recuerdas lo mejor que aprendiste ayer?</p></div>
+            <div class="opciones">
+                <div class="opcion1"> 
+                    <button id="boton1" onclick="mostrarHero6();"> <h4>Sí</h4></a></button>
+                </div>    
+                <div class="opcion2">
+                    <button id="boton2" onclick="mostrarHero5();"> <h4>No</h4></a></button>
+                </div>    
+            </div>
+        </div>
+        <!--<video muted autoplay loop 
+            src="/src/Animal.mp4 y arte, in the style of still from a retrofuturistic film, Lofi steampunk, cinematic focus, realistic, highly detailed, masterpiece, by albert robida.mp4" type="video/mp4">
+        </video>-->
+        <div class="capa"></div>
+    </div>
+    <!-- Cuarta división-->
+    <div id="Hero5">
+        <div class="contenedor">
+            <div class="pregunta"> <p>¿No aprendiste nada?</p></div>
+            <div class="opciones">
+                <div class="opcion1"> 
+                    <button id="boton1" onclick="mostrarHero2();"> <h4>No recuerdo, pero sí</h4></a></button>
+                </div>    
+                <div class="opcion2">
+                    <button id="boton2" onclick="mostrarHero();"> <h4>No sé</h4></a></button>
+                </div>    
+            </div>
+        </div>
+        <div class="capa"></div>
+    </div>
+    <!-- Quinta división-->
+    <div id="Hero6">
+        <div class="contenedor">
+            <div class="pregunta"> <p>¿A qué le dedicas tu atención?</p></div>
+            <div class="opciones">
+                <div class="opcion1"> 
+                    <button id="boton1" onclick="mostrarHero7();"> <h4>Todo</h4></a></button>
+                </div>    
+                <div class="opcion2">
+                    <button id="boton2" onclick="mostrarHero5();"> <h4>Nada</h4></a></button>
+                </div>    
+            </div>
+        </div>
+        <!--<video muted autoplay loop 
+            src="/src/Despertar.mp4 y arte, in the style of still from a retrofuturistic film, Lofi steampunk, cinematic focus, realistic, highly detailed, masterpiece, by albert robida.mp4" type="video/mp4">
+        </video> -->
+        <div class="capa"></div>
+    </div>
+    <!-- Sexta división-->
+    <div id="Hero7">
+        <div class="contenedor">
+            <div id="conCancion" class="pregunta"> <a target="_blank" href="https://www.youtube.com/watch?v=tWWpiMCMNDQ&ab_channel=BLAKE">¿Ya miraste a tu alrededor?</a></div>
+            <div class="opciones">
+                <div class="opcion1"> 
+                    <button id="boton1" onclick="mostrarHero8();"> <h4>Sí</h4></a></button>
+                </div>    
+                <div class="opcion2">
+                    <button id="boton2" onclick="mostrarHero6();"> <h4>No</h4></a></button>
+                </div>    
+            </div>
+        </div>
+        <video muted autoplay loop 
+            src="/src/Despertar.mp4 y arte, in the style of still from a retrofuturistic film, Lofi steampunk, cinematic focus, realistic, highly detailed, masterpiece, by albert robida.mp4" type="video/mp4">
+        </video>
+        <div class="capa"></div>
+    </div>
+    <!-- Septima división-->
+    <div id="Hero8">
+        <div class="contenedor">
+            <div class="pregunta"> <p>¿Recordarás esa imagen?</p></div>
+            <div class="opciones">
+                <div class="opcion1"> 
+                    <button id="boton1" onclick="mostrarHero9();"> <h4>Sí</h4></a></button>
+                </div>    
+                <div class="opcion2">
+                    <button id="boton2" onclick="mostrarHero6();"> <h4>No</h4></a></button>
+                </div>    
+            </div>
+        </div>
+        <!--<video muted autoplay loop 
+            src="/src/Armas y arte, in the style of still from a retrofuturistic film, Lofi steampunk, cinematic focus, realistic, highly detailed, masterpiece, by albert robida.mp4 y arte, in the style of still from a retrofuturistic film, Lofi steampunk, cinematic focus, realistic, highly detailed, masterpiece, by albert robida.mp4" type="video/mp4">
+        </video>-->
+        <div class="capa"></div>
+    </div>
+    <!-- Octava división-->
+    <div id="Hero9">
+        <div id="ocultarsueño" class="contenedor">
+            <div id="soñar" class="pregunta"> <a target="_blank" href="https://www.youtube.com/watch?v=4CodCswKzX0&ab_channel=OtroCanaldeRap2">¿Sueñas con <br> tus sueños?</a></div>
+            <div class="opciones">
+                <div class="opcion1"> 
+                    <a id="exitsueños" href="Parte2.html">Sí</a>
+                </div>    
+                <div class="opcion2">
+                    <button id="boton2" onclick="avisoSueños()"> <h4>No</h4></a></button>
+                </div>    
+            </div>
+            <div id="sueño">
+                Ya casi sales del primer bucle, de hecho, ya no te devolveré. <br>
+                Pero para seguir avanzando es este acertijo <br>
+                (que he creado para ********* un poco) <br> debes soñar con tus sueños. <br>
+                Es probable que no entiendas muchas cosas, <br>
+                en este momento puede ser la pregunta en cuestión,  <br>
+                poco a poco quiero que vayas entendiendo. <br>
+                <br>
+                Sueña con tus sueños.
+            </div>
+        </div>
+        
+        <video muted autoplay loop 
+            src="src/Gafas.mp4" type="video/mp4">
+        </video>
+        <div class="capa"></div>
+    </div>
+</div>
+<div id="ultimo"></div>
+</body>
+
+<script>
+    
+    function mostrarHero() {
+        document.getElementById('Hero').style.display = 'flex';
+        document.getElementById('Hero2', 'Hero3', 'Hero4', 'Hero5', 'Hero6', 'Hero7', 'Hero8').style.display = 'none';
+        cambiarFondo();  
+    }
+    function mostrarHero2() {
+        document.getElementById('Hero2').style.display = 'flex';
+        document.getElementById('Hero').style.display = 'none'; 
+        document.getElementById('Hero3').style.display = 'none';
+        document.getElementById('Hero5').style.display = 'none';
+        cambiarFondo();  
+    }
+    function mostrarHero3() {
+        document.getElementById('Hero3').style.display = 'flex';
+        document.getElementById('Hero2').style.display = 'none';
+        document.getElementById('Hero').style.display = 'none';  
+        cambiarFondo();   
+    }
+    function mostrarHero4() {
+        document.getElementById('Hero4').style.display = 'flex';
+        document.getElementById('Hero3').style.display = 'none';
+        cambiarFondo();    
+    }
+    function mostrarHero5() {
+        document.getElementById('Hero5').style.display = 'flex';
+        document.getElementById('Hero4').style.display = 'none';
+        document.getElementById('Hero6').style.display = 'none';  
+        cambiarFondo();    
+    }
+    function mostrarHero6() {
+        document.getElementById('Hero6').style.display = 'flex';
+        document.getElementById('Hero5').style.display = 'none';
+        document.getElementById('Hero4').style.display = 'none';
+        document.getElementById('Hero7').style.display = 'none';  
+        document.getElementById('Hero8').style.display = 'none'; 
+        cambiarFondo();    
+    }
+    function mostrarHero7() {
+        document.getElementById('Hero7').style.display = 'flex';
+        document.getElementById('Hero6').style.display = 'none';  
+        cambiarFondo();  
+    }
+    function mostrarHero8() {
+        document.getElementById('Hero8').style.display = 'flex';
+        document.getElementById('Hero7').style.display = 'none'; 
+        cambiarFondo();   
+    }
+    function mostrarHero9() {
+        document.getElementById('Hero9').style.display = 'flex';
+        document.getElementById('Hero8').style.display = 'none';  
+        cambiarFondo();  
+    }
+
+    function avisoSueños() {
+        document.getElementById('sueño').style.display = 'flex';
+    }
+    
+    function ocultarAvisoSueños() {
+        document.getElementById('sueño').style.display = 'none';
+    }
+    var ocultarsueño = document.getElementById('sueño');
+    sueño.onclick = ocultarAvisoSueños;
+
+    var maximo = 22;
+    function cambiarFondo() {
+        var fondo = Math.floor(Math.random() * maximo);
+        document.querySelector('body').style.background =`url('/src/LISTOS/${fondo}.jpg') center center / cover`;
+    }
+
+</script>
+</html>

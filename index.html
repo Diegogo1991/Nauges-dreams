@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio</title>
+</head>
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+/* font-family: 'Righteous',
+cursive; */
+
+@import url('https://fonts.googleapis.com/css2?family=Foldit:wght@100;300&family=Kanit:ital,wght@0,300;0,500;1,200&family=Righteous&display=swap');
+/* font-family: 'Foldit', cursive;
+font-family: 'Kanit', sans-serif;
+font-family: 'Righteous', cursive;
+*/
+
+#ultimo + div{
+    visibility: hidden;
+}
+
+body{
+    margin: 0;
+    /*background-size: cover;
+    background-repeat: no repeat;*/
+    font-family: 'Righteous';
+    animation: animate 1s linear infinite;
+}
+
+html{
+    font-size: 16px;
+
+    @media screen and (max-width: 340px){
+        font-size: 12px;
+    }
+    @media screen and (min-width: 1000px){
+        font-size: 20px;
+    }
+}
+
+@keyframes animate  {
+    0%{
+        filter: hue-rotate(0deg);
+    }
+    100%{
+        filter: hue-rotate(360deg);
+    }
+}
+.contenedor{
+    height: 90vh;
+    width: 100%;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    z-index: 5;
+}
+
+#linkP {
+    text-decoration: none;
+    margin-right: 0;
+    background-color: rgba(0, 225, 255, 0.397);
+    height: 10%;
+    width: 100%;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    position: relative;
+    top: 5vh;
+    z-index: 2;
+}
+#linkP a {
+    color: aliceblue;
+    text-decoration: none;
+    height: 100%;
+    width: 100%;
+    font-size: 1.2rem;
+}
+
+#novedades{
+    position: absolute;
+    display: none;
+    top: 20%;
+    border-radius: 20px;
+    width: 10%;
+    height: 10rem;
+    background: linear-gradient(rgba(255, 94, 0, 0.6), rgb(255, 136, 0, 0.6), rgb(225, 0, 255, 0.6), rgb(76, 0, 255, 0.6));
+    font-size: 1rem;
+    color: aliceblue;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    text-align: center;
+    padding: 10px;
+    box-sizing: border-box;
+    animation: novedades 1s forwards;
+}
+
+@keyframes novedades{
+   100%{
+      width: 80%
+   }
+}
+.opciones{
+    position: absolute;
+    bottom: 30%;
+    width: 60%;
+    margin-bottom: 20px;
+}
+
+#aviso{
+    position: absolute;
+    bottom: 20%;
+    width: 50%;
+    height: 3rem;
+    background: rgba(205, 3, 255, 0.514);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.opcion1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 45%;
+    height: 60px;
+    float: left;
+}
+
+.opcion2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 45%;
+    height: 60px;
+    float: right;
+}
+
+.link1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 1rem;
+    color: rgb(249, 250, 253);
+    text-decoration: none;
+    background-color: rgba(8, 248, 168, 0.623);
+    width: 90%;
+    height: 100%;
+    border-radius: 10px;
+    border: 2px;
+    border-color: black;
+}
+.link2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 1rem;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    background-color: rgba(206, 156, 40, 0.647);
+    width: 90%;
+    height: 100%;
+    border-radius: 10px;
+    border: 2px;
+    border-color: black;
+}
+#hero {
+    min-height: 100vh;
+    position: relative;
+}
+video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.capa {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #1c1c1d;
+    opacity: 0.5;
+    mix-blend-mode: overlay;
+
+}
+.aviso {
+    color: aliceblue;
+    text-align: center;
+    margin-top: 30%;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+</style>
+<body>
+<div id="hero">
+    <div id="linkP" >
+        <a href="https://www.youtube.com/watch?v=95MODS_B4Go&ab_channel=bumoon" target="_blank"> 
+            <h3> NAUGES <br> DREAMS </h3>
+        </a>
+    </div>
+    <div id="ocultarnovedades" class="contenedor">
+        <div id="novedades" >
+            -Tengo unas "pequeñas" confesiones al final. <br>
+            <br>
+            PISTA: Cuando las letras están encerradas <br>
+            es porque quieren decir algo.
+        </div>
+        <div class="opciones">
+            <div class="opcion1"> 
+                <a class="link1" href="Parte1.html"> Easy</a>
+            </div>    
+            <div class="opcion2">
+                <a class="link2" href="1Esto.html"> Hard </a>
+            </div> 
+        </div>
+        <div id="aviso" class="aviso">
+            ¡Hay novedades!
+        </div>
+    </div>
+    <video muted autoplay loop 
+        src="0.mp4" type="video/mp4">
+    </video>
+    <div class="capa"></div>
+</div>
+<div id="ultimo"></div>
+</body>
+
+<script>
+/*window.alert('Puedes perder algo si no abres los ojos antes de que sea tarde');
+prompt("Sugiera una fecha 00?/00?/23")*/
+
+let avisoNov = document.getElementById('aviso');
+
+avisoNov.addEventListener('click', mostrarNovedades);
+
+function mostrarNovedades(){
+    document.getElementById('novedades').style.display = 'flex';
+}
+
+let ocultNov = document.getElementById('novedades');
+ocultNov.addEventListener('click', ocultarNovedades)
+
+/*let ocultNoved = document.getElementById('ocultarnovedades');
+ocultNoved.addEventListener('click', ocultarNovedades)*/
+
+function ocultarNovedades() {
+    
+    document.getElementById('novedades').style.display = 'none';
+}
+
+</script>
+</html>
+ 
