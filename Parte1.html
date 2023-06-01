@@ -16,7 +16,7 @@
     visibility: hidden;
 }
 #fondo {
-    background: url("/src/1.jpg");
+    background: url("./src/1.jpg");
     margin: 0;
     background-size: cover;
     background-repeat: no-repeat;
@@ -291,7 +291,7 @@ video {
             </div>
         </div>
         <video muted autoplay loop 
-            src="/src/Despertar.mp4" type="video/mp4">
+            src="./src/Despertar.mp4" type="video/mp4">
         </video>
         <div class="capa"></div>
     </div>
@@ -396,7 +396,7 @@ video {
             </div>
         </div>
         <video muted autoplay loop 
-            src="/src/Despertar.mp4 y arte, in the style of still from a retrofuturistic film, Lofi steampunk, cinematic focus, realistic, highly detailed, masterpiece, by albert robida.mp4" type="video/mp4">
+            src="./src/Despertar.mp4 y arte, in the style of still from a retrofuturistic film, Lofi steampunk, cinematic focus, realistic, highly detailed, masterpiece, by albert robida.mp4" type="video/mp4">
         </video>
         <div class="capa"></div>
     </div>
@@ -443,7 +443,7 @@ video {
         </div>
         
         <video muted autoplay loop 
-            src="src/Gafas.mp4" type="video/mp4">
+            src="./src/Gafas.mp4" type="video/mp4">
         </video>
         <div class="capa"></div>
     </div>
@@ -519,7 +519,7 @@ video {
     var maximo = 22;
     function cambiarFondo() {
         var fondo = Math.floor(Math.random() * maximo);
-        document.querySelector('body').style.background =`url('/src/LISTOS/${fondo}.jpg') center center / cover`;
+        document.querySelector('body').style.background =`url('./src/LISTOS/${fondo}.jpg') center center / cover`;
     }
 
 </script>
