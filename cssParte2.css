@@ -5,6 +5,13 @@
       visibility: hidden;
    }
 
+   #fondo {
+      background: url("./src/3333.jpg");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+   }
+
    html * {
       font-size: 18px;
       font-family: 'Roboto Condensed';
@@ -85,6 +92,7 @@
       align-items: center;
       text-align: center;
       color: rgb(249, 250, 253);
+      text-shadow: 0 0 10px black;
       text-decoration: none;
       background-color: rgba(255, 0, 234, 0.507);
       width: 90%;
@@ -101,6 +109,7 @@
       align-items: center;
       text-align: center;
       color: rgb(255, 255, 255);
+      text-shadow: 0 0 10px black;
       text-decoration: none;
       background-color: rgba(7, 221, 236, 0.534);
       width: 90%;
@@ -157,6 +166,11 @@
       display: none;
    }
 
+   #Hero3 #conCancion {
+      background-color: rgba(93, 7, 173, 0.623);
+      border: .1rem solid rgb(0, 242, 250);
+   }
+
    /*Especifico Hero4*/
    #Hero4 {
       min-height: 100vh;
@@ -171,6 +185,11 @@
       display: none;
    }
 
+   #Hero5 #conCancion{
+      background-color: rgba(3, 143, 61, 0.623);
+      border: .1rem solid rgb(0, 242, 250);
+   }
+
    /*Especifico Hero6*/
    #Hero6 {
       min-height: 100vh;
@@ -178,28 +197,16 @@
       display: none;
    }
 
-   #exitamistades {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      color: rgb(249, 250, 253);
-      text-decoration: none;
-      background-color: rgba(216, 9, 243, 0.552);
-      width: 90%;
-      height: 100%;
-      border-radius: 10px;
-      border: 2px;
-      border-color: black;
-      font-size: 1rem;
-      font-weight: bold;
-   }
-
    /*Especifico Hero7*/
    #Hero7 {
       min-height: 100vh;
       position: relative;
       display: none;
+   }
+
+   #Hero7 #conCancion {
+      background-color: rgba(247, 81, 4, 0.623);
+      border: .1rem solid rgb(0, 242, 250);
    }
 
    /*Especifico Hero8*/
@@ -214,4 +221,9 @@
       min-height: 100vh;
       position: relative;
       display: none;
+   }
+
+   #Hero9 #conCancion {
+      background-color: rgba(247, 4, 4, 0.623);
+      border: .1rem solid rgb(0, 242, 250);
    }

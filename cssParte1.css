@@ -6,8 +6,7 @@
 }
 
 #fondo {
-   background: url("/src/1.jpg");
-   margin: 0;
+   background: url("./src/1.jpg");
    background-size: cover;
    background-repeat: no-repeat;
    background-position: center;
@@ -159,8 +158,8 @@ video {
    display: none;
 }
 
-#conCancion {
-   background-color: rgba(145, 6, 138, 0.623);
+#Hero2 #conCancion {
+   background-color: rgba(145, 6, 64, 0.623);
    border: .1rem solid rgb(0, 242, 250);
 }
 
@@ -203,8 +202,8 @@ video {
    display: none;
 }
 
-#conCancion {
-   background-color: rgba(65, 7, 173, 0.623);
+#Hero7 #conCancion {
+   background-color: rgba(86, 5, 238, 0.623);
    border: .1rem solid rgb(0, 242, 250);
 }
 
@@ -265,6 +264,6 @@ video {
 }*/
 
 #soñar {
-   background-color: rgba(6, 15, 145, 0.623);
-   border: .1rem solid rgb(0, 242, 250);
+   background-color: rgba(41, 1, 187, 0.623);
+   border: .1rem solid rgb(250, 0, 237);
 }
