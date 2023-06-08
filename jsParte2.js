@@ -2,18 +2,23 @@
 var colores = ["rgba(221, 113, 11, 0.55)", "rgba(11, 221, 116, 0.55)", "rgba(11, 67, 221, 0.55)", "rgba(172, 11, 221, 0.55)", "rgba(221, 11, 92, 0.55)", "rgba(221, 11, 11, 0.55)", "rgba(11, 221, 116, 0.55)", "rgba(29, 221, 11, 0.55)", "rgba(221, 218, 11, 0.55)", "rgba(221, 123, 11, 0.55)", "rgba(221, 78, 11, 0.55)", "rgba(9, 204, 243, 0.55)"];
 
 function cambiarColores(query) {
-   let indice1 = Math.floor(Math.random() * colores.length);
-   let indice2 = Math.floor(Math.random() * colores.length);
+   /*let indice1 = Math.floor(Math.random() * colores.length);*/
+   /*let indice2 = Math.floor(Math.random() * colores.length);*/
+   let maximo = 236;
+   let boton1 = document.querySelector(`#${query} .boton1`);
+   let boton2 = document.querySelector(`#${query} .boton2`);
 
-   let boton1 = document.querySelector(`#${query} #boton1`);
-   let boton2 = document.querySelector(`#${query} #boton2`);
-
-   boton1.style.backgroundColor = `${colores[indice1]}`;
-   boton2.style.backgroundColor = `${colores[indice2]}`;
+   boton1.style.backgroundColor = `rgba(${Math.floor(Math.random() * maximo)}, ${Math.floor(Math.random() * maximo)}, ${Math.floor(Math.random() * maximo)}, 0.507)`;
+   boton2.style.backgroundColor = `rgba(${Math.floor(Math.random() * maximo)}, ${Math.floor(Math.random() * maximo)}, ${Math.floor(Math.random() * maximo)}, 0.507)`;
 
 }
 
-
+//CAMBIAR FONDOS ALEATORIOS
+function cambiarFondo() {
+   let maximo = 22;
+   var fondo = Math.floor(Math.random() * maximo);
+   document.getElementById('fondo').style.background = `url('./src/LISTOS/${fondo}.jpg') center center / cover`;
+}
 
 let b1h1 = document.getElementById('b1h1');
 b1h1.addEventListener('click', mostrarHero2);
@@ -80,6 +85,8 @@ function mostrarHero() {
    ocultarHeros('Hero6');
    ocultarHeros('Hero7');
    ocultarHeros('Hero8');  
+
+   cambiarFondo();
 }
 
 function mostrarHero2() {
@@ -87,6 +94,8 @@ function mostrarHero2() {
 
    document.getElementById('Hero2').style.display = 'flex';
    ocultarHeros('Hero');  
+
+   cambiarFondo();
 }
 
 function mostrarHero3() {
@@ -95,7 +104,9 @@ function mostrarHero3() {
    document.getElementById('Hero3').style.display = 'flex';
    ocultarHeros('Hero2'); 
    ocultarHeros('Hero');  
-   ocultarHeros('Hero8');  
+   ocultarHeros('Hero8');
+   
+   cambiarFondo();
 }
 
 function mostrarHero4() {
@@ -104,6 +115,8 @@ function mostrarHero4() {
    document.getElementById('Hero4').style.display = 'flex';
    ocultarHeros('Hero3');  
    ocultarHeros('Hero9');  
+
+   cambiarFondo();
 }
 
 function mostrarHero5() {
@@ -115,13 +128,17 @@ function mostrarHero5() {
    ocultarHeros('Hero4');  
    ocultarHeros('Hero8'); 
    ocultarHeros('Hero9'); 
+
+   document.getElementById('fondo').style.background = "black";
 }
 
 function mostrarHero6() {
    cambiarColores('Hero6');
 
    document.getElementById('Hero6').style.display = 'flex';
-   document.getElementById('Hero5').style.display = 'none';  
+   ocultarHeros('Hero5');  
+
+   cambiarFondo();
 }
 
 function mostrarHero7() {
@@ -130,6 +147,8 @@ function mostrarHero7() {
    document.getElementById('Hero7').style.display = 'flex';
    ocultarHeros('Hero2'); 
    ocultarHeros('Hero4'); 
+
+   cambiarFondo();
 }
 
 function mostrarHero8() {
@@ -137,15 +156,19 @@ function mostrarHero8() {
 
    document.getElementById('Hero8').style.display = 'flex';
    ocultarHeros('Hero5'); 
-   ocultarHeros('Hero7');   
+   ocultarHeros('Hero7');
+   
+   cambiarFondo();
 }
 
 function mostrarHero9() {
    cambiarColores('Hero9');
 
-   ocultarHeros('Hero9');
+   document.getElementById('Hero9').style.display = 'flex';
    ocultarHeros('Hero3');  
    ocultarHeros('Hero7');
+
+   cambiarFondo();
 }
 
 //ADMIN DIVS
@@ -154,17 +177,4 @@ function ocultarHeros(hero) {
 }
 
 
-//CAMBIAR COLORES OPCIONES
-var colores = ["rgba(221, 113, 11, 0.55)", "rgba(11, 221, 116, 0.55)", "rgba(11, 67, 221, 0.55)", "rgba(172, 11, 221, 0.55)", "rgba(221, 11, 92, 0.55)", "rgba(221, 11, 11, 0.55)", "rgba(11, 221, 116, 0.55)", "rgba(29, 221, 11, 0.55)", "rgba(221, 218, 11, 0.55)", "rgba(221, 123, 11, 0.55)", "rgba(221, 78, 11, 0.55)", "rgba(9, 204, 243, 0.55)"];
 
-function cambiarColores(query) {
-   let indice1 = Math.floor(Math.random() * colores.length);
-   let indice2 = Math.floor(Math.random() * colores.length);
-
-   let boton1 = document.querySelector(`#${query} .boton1`);
-   let boton2 = document.querySelector(`#${query} .boton2`);
-
-   boton1.style.backgroundColor = `${colores[indice1]}`;
-   boton2.style.backgroundColor = `${colores[indice2]}`;
-
-}

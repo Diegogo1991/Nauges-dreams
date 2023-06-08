@@ -6,279 +6,56 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Parte 3</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="cssParte3.css">
 </head>
-<style>
-    #ultimo+div {
-        visibility: hidden;
-    }
 
-    body {
-        margin: 0;
-        /*background-size: cover;
-    background-repeat: no repeat;*/
-        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-        animation: animate 1s linear infinite;
-
-    }
-
-    html{
-    font-size: 16px;
-
-        @media screen and (max-width: 340px){
-        font-size: 12px;
-        }
-    }
-    .contenedor {
-        height: 100vh;
-        width: 100%;
-        margin: 0;
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        position: relative;
-        z-index: 2;
-    }
-
-    .pregunta {
-        background-color: rgba(137, 43, 226, 0.527);
-        margin-top: 10%;
-        color: antiquewhite;
-        display: flex;
-        text-align: center;
-        justify-content: center;
-
-        width: 60%;
-        height: 15%;
-        text-decoration: none;
-    }
-
-    .pregunta a {
-        font-size: 1.2rem;
-        text-decoration: none;
-        color: beige;
-        font-size: 20px;
-        display: flex;
-        align-items: center;
-        justify-content: center
-    }
-
-    .opciones {
-        position: absolute;
-        bottom: 20%;
-        width: 70%;
-    }
-
-    .opcion1 {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-        width: 45%;
-        height: 60px;
-        float: left;
-    }
-
-    .opcion2 {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-        width: 45%;
-        height: 60px;
-        float: right;
-    }
-
-    .boton1 {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        color: rgb(249, 250, 253);
-        text-decoration: none;
-        background-color: rgba(9, 204, 243, 0.552);
-        width: 90%;
-        height: 100%;
-        border-radius: 10px;
-        border: 2px;
-        border-color: black;
-        font-size: 1rem;
-    }
-
-    .boton2 {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        color: rgb(255, 255, 255);
-        text-decoration: none;
-        background-color: rgba(221, 113, 11, 0.664);
-        width: 90%;
-        height: 100%;
-        border-radius: 10px;
-        border: 2px;
-        border-color: black;
-        font-size: 1rem;
-    }
-
-    video {
-        position: absolute;
-        top: 0;
-        left: 0;
-        min-height: 100vh;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
-
-    .capa {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: #1c1c1d;
-        opacity: 0.5;
-        mix-blend-mode: overlay;
-
-    }
-
-    /*Especifico Hero*/
-    #hero {
-        min-height: 100%;
-        position: relative;
-        display: flex;
-    }
-
-    /*Especifico Hero2*/
-    #Hero2 {
-        background-image: url("/src/1.jpg");
-        margin: 0;
-        background-size: cover;
-        background-repeat: no-repeat;
-        min-height: 100vh;
-        position: relative;
-        display: none;
-    }
-
-    /*Especifico Hero3*/
-    #Hero3 {
-        min-height: 100vh;
-        position: relative;
-        display: none;
-
-    }
-
-    /*Especifico Hero4*/
-    #Hero4 {
-        min-height: 100vh;
-        position: relative;
-        display: none;
-
-    }
-
-    /*Especifico Hero5*/
-    #Hero5 {
-        min-height: 100vh;
-        position: relative;
-        display: none;
-
-    }
-
-    /*Especifico Hero6*/
-    #Hero6 {
-        min-height: 100vh;
-        position: relative;
-        display: none;
-    }
-
-    #exitamistades {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        color: rgb(249, 250, 253);
-        text-decoration: none;
-        background-color: rgba(216, 9, 243, 0.552);
-        width: 90%;
-        height: 100%;
-        border-radius: 10px;
-        border: 2px;
-        border-color: black;
-    }
-
-    /*Especifico Hero7*/
-    #Hero7 {
-        min-height: 100vh;
-        position: relative;
-        display: none;
-
-    }
-
-    /*Especifico Hero8*/
-    #Hero8 {
-        min-height: 100vh;
-        position: relative;
-        display: none;
-
-    }
-
-    /*Especifico Hero9*/
-    #Hero9 {
-        min-height: 100vh;
-        position: relative;
-        display: none;
-
-    }
-</style>
-
-<body>
+<body id="fondo">
     <div id="Hero">
         <div class="contenedor">
-            <div class="pregunta"> <a href="https://www.youtube.com/watch?v=J8OiSixFxNE&ab_channel=BLAKE"
-                    target="_blank">
-                    ¿Me esfuerzo por?</a></div>
+            <div class="pregunta"> <p>¿Recuerdas lo del plan?</p></div>
             <div class="opciones">
                 <div class="opcion1">
                     <button id="b1h1" class="boton1">
-                        <h4>Mí</h4>
+                        <h4>Creo que sí</h4>
                     </button>
                 </div>
                 <div class="opcion2">
                     <button id="b2h1" class="boton2">
-                        <h4>Los demás</h4>
+                        <h4>No te conozco</h4>
                     </button>
                 </div>
             </div>
         </div>
-        <video muted autoplay loop src="/src/Gafas.mp4" type="video/mp4">
+        <!--<video muted autoplay loop src="/src/Gafas.mp4" type="video/mp4">-->
         </video>
         <div class="capa"></div>
     </div>
     <!-- Primera división-->
     <div id="Hero2">
         <div class="contenedor">
-            <div class="pregunta"> <a href="">¿Tienes un plan?</a></div>
+            <div class="pregunta"> <a target="_blank" href="">Estudio porque...</a></div>
             <div class="opciones">
                 <div class="opcion1">
                     <button id="b1h2" class="boton1">
-                        <h4>Sí</h4>
+                        <h4>Quiero</h4>
                     </button>
                 </div>
                 <div class="opcion2">
                     <button id="b2h2" class="boton2">
-                        <h4>De Qué</h4>
+                        <h4>Lo deseo</h4>
                     </button>
                 </div>
             </div>
         </div>
-        <video muted autoplay loop src="/src/make_the iris red.mp4" type="video/mp4">
+        <video muted autoplay loop src="/src/make_the iris red.mp4" type="video/mp4"> <!--Cambiar-->
         </video>
         <div class="capa"></div>
     </div>
     <!-- Segunda división-->
     <div id="Hero3">
         <div class="contenedor">
-            <div class="pregunta"> <a href="">¿Sabes identificar una mala amistad?</a></div>
+            <div class="pregunta"> <p>¿Recuerdas la primer pregunta?</p></div>
             <div class="opciones">
                 <div class="opcion1">
                     <button id="b1h3" class="boton1">
@@ -292,96 +69,98 @@
                 </div>
             </div>
         </div>
-        <video muted autoplay loop src="/src/Despertar.mp4" type="video/mp4">
-        </video>
+        <!--<video muted autoplay loop src="/src/Despertar.mp4" type="video/mp4">
+        </video>-->
         <div class="capa"></div>
     </div>
     <!-- Tercera división-->
     <div id="Hero4">
         <div class="contenedor">
-            <div class="pregunta"> <a href="">Una mala amistad...</a></div>
+            <div class="pregunta"> <p>¿Pasas la pregunta por inercia o realmente piensas?</p></div>
             <div class="opciones">
                 <div class="opcion1">
                     <button id="b1h4" class="boton1">
-                        <h4>Me hace sentir bien</h4>
+                        <h4>Inercia</h4>
                     </button>
                 </div>
                 <div class="opcion2">
                     <button id="b2h4" class="boton2">
-                        <h4>Me hace ser mejor</h4>
+                        <h4>Pensar</h4>
                     </button>
                 </div>
             </div>
         </div>
-        <video muted autoplay loop src="/src/Despertar.mp4" type="video/mp4">
-        </video>
+        <!--<video muted autoplay loop src="/src/Despertar.mp4" type="video/mp4">
+        </video>-->
         <div class="capa"></div>
     </div>
     <!-- Cuarta división-->
     <div id="Hero5">
         <div class="contenedor">
-            <div class="pregunta"> <a href="">Mira tu reflejo en la pantalla</a></div>
+            <div class="pregunta"> <p>¿Sobre qué preguntó?</p></div>
             <div class="opciones">
                 <div class="opcion1">
                     <button id="b1h5" class="boton1">
-                        <h4>Quiero la verdad</h4>
+                        <h4>Despertar</h4>
                     </button>
                 </div>
                 <div class="opcion2">
                     <button id="b2h5" class="boton2">
-                        <h4>Esto no tiene sentido</h4>
+                        <h4>Pensar</h4>
                     </button>
                 </div>
             </div>
         </div>
-        <video muted autoplay loop src="/src/Despertar.mp4" type="video/mp4">
-        </video>
+        <!--<video muted autoplay loop src="/src/Despertar.mp4" type="video/mp4">
+        </video>-->
         <div class="capa"></div>
     </div>
     <!-- Quinta división-->
     <div id="Hero6">
         <div class="contenedor">
-            <div class="pregunta"> <a href="">Dale un sentido</a></div>
+            <div class="pregunta"> <p>¿Pasarás toda tu vida haciendo cosas por inercia?</p></div>
             <div class="opciones">
                 <div class="opcion1">
-                    <a id="exitamistades" href="Parte3.html">Aprender</a></button>
+                    <button id="b1h6" class="boton1">
+                        <h4>Pensar</h4>
+                    </button>
                 </div>
                 <div class="opcion2">
                     <button id="b2h6" class="boton2">
-                        <h4>Observar</h4>
+                        <h4>Inercia</h4>
                     </button>
                 </div>
             </div>
         </div>
-        <video muted autoplay loop src="/src/Despertar.mp4" type="video/mp4">
-        </video>
+        <!--<video muted autoplay loop src="/src/Despertar.mp4" type="video/mp4">
+        </video>-->
         <div class="capa"></div>
     </div>
     <!-- Sexta división-->
     <div id="Hero7">
         <div class="contenedor">
-            <div class="pregunta"> <a href="">¿El éxito es?</a></div>
+            <div class="pregunta"> <p>¿Pensarás a profundidad la última cuestión?</p></div>
             <div class="opciones">
                 <div class="opcion1">
                     <button id="b1h7" class="boton1">
-                        <h4>Dinero</h4>
+                        <h4>Si</h4>
                     </button>
                 </div>
                 <div class="opcion2">
                     <button id="b2h7" class="boton2">
-                        <h4>Tranquilidad</h4>
+                        <h4>No</h4>
                     </button>
                 </div>
             </div>
         </div>
-        <video muted autoplay loop src="/src/Despertar.mp4" type="video/mp4">
-        </video>
+        <!--<video muted autoplay loop src="/src/Despertar.mp4" type="video/mp4">
+        </video>-->
         <div class="capa"></div>
     </div>
     <!-- Septima división-->
     <div id="Hero8">
         <div class="contenedor">
-            <div class="pregunta"> <a href="">¿Tienes el dinero que te gustaría?</a></div>
+            <div class="pregunta"> <a href="">¿Aprenderás algo de esto?</a></div>
             <div class="opciones">
                 <div class="opcion1">
                     <button id="b1h8" class="boton1">
@@ -395,29 +174,29 @@
                 </div>
             </div>
         </div>
-        <video muted autoplay loop src="/src/Despertar.mp4" type="video/mp4">
-        </video>
+        <!--<video muted autoplay loop src="/src/Despertar.mp4" type="video/mp4">
+        </video>-->
         <div class="capa"></div>
     </div>
     <!-- Octava división-->
     <div id="Hero9">
         <div class="contenedor">
-            <div class="pregunta"> <a href="">¿Tienes la tranquilidad que te gustaría?</a></div>
+            <div class="pregunta"> <a href="">Eres tú</a></div>
             <div class="opciones">
                 <div class="opcion1">
                     <button id="b1h9" class="boton1">
-                        <h4>Sí</h4>
+                        <h4>Contra ti</h4>
                     </button>
                 </div>
                 <div class="opcion2">
                     <button id="b2h9" class="boton2">
-                        <h4>No</h4>
+                        <h4>No hay nadie más</h4>
                     </button>
                 </div>
             </div>
         </div>
-        <video muted autoplay loop src="/src/Despertar.mp4" type="video/mp4">
-        </video>
+        <!--<video muted autoplay loop src="/src/Despertar.mp4" type="video/mp4">
+        </video>-->
         <div class="capa"></div>
     </div>
     </div>

@@ -5,7 +5,7 @@
       visibility: hidden;
    }
 
-   #fondo {
+   #fondo{
       background: url("./src/3333.jpg");
       background-size: cover;
       background-repeat: no-repeat;
@@ -111,7 +111,7 @@
       color: rgb(255, 255, 255);
       text-shadow: 0 0 10px black;
       text-decoration: none;
-      background-color: rgba(7, 221, 236, 0.534);
+      background-color: rgba(7, 221, 236, 0.507);
       width: 90%;
       height: 100%;
       border-radius: 10px;
@@ -150,7 +150,7 @@
 
    /*Especifico Hero2*/
    #Hero2 {
-      background-image: url("/src/1.jpg");
+      background-image: url("/src/1.jpg"); /*PARA EVIDENCIAS*/
       margin: 0;
       background-size: cover;
       background-repeat: no-repeat;
