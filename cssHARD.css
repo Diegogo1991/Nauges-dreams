@@ -27,6 +27,7 @@ html {
 #hero {
    display: flex;
    min-height: 100vh;
+   min-width: 100vw;
    position: relative;
    z-index: 1;
 }
