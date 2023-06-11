@@ -235,6 +235,7 @@ video {
    background: linear-gradient(rgba(255, 94, 0, 0.6), rgb(255, 136, 0, 0.6), rgb(225, 0, 255, 0.6), rgb(76, 0, 255, 0.6));
    font-family: 'Roboto Condensed';
    font-size: 1rem;
+   font-weight: bold;
    color: aliceblue;
    justify-content: center;
    align-items: center;
