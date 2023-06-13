@@ -11,14 +11,14 @@
 <body id="fondo">
     <div id="Hero">
         <div class="contenedor">
-            <div class="pregunta"> <a href="https://www.youtube.com/watch?v=J8OiSixFxNE&ab_channel=BLAKE" target="_blank">
+            <div class="pregunta"> <a class="pregunAuto" href="https://www.youtube.com/watch?v=J8OiSixFxNE&ab_channel=BLAKE" target="_blank">
                 ¿Qué fue lo primero que pensaste al despertar?</a></div>
             <div class="opciones">
                 <div class="opcion1"> 
-                    <button id="boton1" onclick="mostrarHero2();"> <h4>No recuerdo</h4></a></button>
+                    <button class="boton11" id="boton1" onclick="mostrarHero2();"> <h4>No recuerdo</h4></a></button>
                 </div>    
                 <div class="opcion2">
-                    <button id="boton2" onclick="mostrarHero3();"> <h4>Ya me acordé</h4></a></button>
+                    <button class="boton22" id="boton2" onclick="mostrarHero3();"> <h4>Ya me acordé</h4></a></button>
                 </div>    
             </div>
         </div>
@@ -30,7 +30,7 @@
     <!-- Primera división-->
     <div id="Hero2">
         <div class="contenedor">
-            <div id="conCancion" class="pregunta"> <a target="_blank" href="https://www.youtube.com/watch?v=tDry2XAnh9E&ab_channel=TodoLetrasAbout">¿Por qué no lo recuerdas?</a></div>
+            <div id="conCancion" class="pregunta"> <a class="pregunAutos" target="_blank" href="https://www.youtube.com/watch?v=tDry2XAnh9E&ab_channel=TodoLetrasAbout">¿Por qué no lo recuerdas?</a></div>
             <div class="opciones">
                 <div class="opcion1"> 
                     <button id="boton1" onclick="mostrarHero();"> <h4>No sé</h4></a></button>
@@ -182,5 +182,6 @@
 </div>
 <div id="ultimo"></div>
 </body>
+<script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
 <script src="jsParte1.js"></script>
 </html>

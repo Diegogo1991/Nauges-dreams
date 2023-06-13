@@ -1,3 +1,28 @@
+//ANIMACION ESCRIBIR
+var mostrarEnPregunta = document.querySelector('.pregunta a').textContent;
+const pregunta = new Typed('.pregunAuto', {
+   strings: [mostrarEnPregunta],
+   typeSpeed: 75,
+   cursorChar: '',
+   loop: false
+});
+   
+var paraBoton11 = document.querySelector('#boton1 h4').textContent;
+const boton11 = new Typed('.boton11', {
+   strings: [paraBoton11],
+   typeSpeed: 75,
+   cursorChar: '',
+   loop: false
+});
+
+var paraBoton22 = document.querySelector('#boton2 h4').textContent;
+const boton22 = new Typed('.boton22', {
+   strings: [paraBoton22],
+   typeSpeed: 75,
+   cursorChar: '',
+   loop: false
+});
+
 //CAMBIAR COLORES OPCIONES
 
 var colores = ["rgba(221, 113, 11, 0.55)", "rgba(11, 221, 116, 0.55)", "rgba(11, 67, 221, 0.55)", "rgba(172, 11, 221, 0.55)", "rgba(221, 11, 92, 0.55)", "rgba(221, 11, 11, 0.55)", "rgba(11, 221, 116, 0.55)", "rgba(29, 221, 11, 0.55)", "rgba(221, 218, 11, 0.55)", "rgba(221, 123, 11, 0.55)", "rgba(221, 78, 11, 0.55)", "rgba(9, 204, 243, 0.55)"];
@@ -50,7 +75,6 @@ function mostrarHero2() {
    ocultarHeros('Hero5');
 
    cambiarFondo();
-   
 }
 function mostrarHero3() {
    cambiarColores('Hero3');
