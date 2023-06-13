@@ -11,7 +11,7 @@
 <div id="hero">
     <div id="linkP" >
         <a href="https://www.youtube.com/watch?v=95MODS_B4Go&ab_channel=bumoon" target="_blank"> 
-            <h3> NAUGES <br> DREAMS </h3>
+            <h3><span class="typed"></span> <!--NAUGES <br> DREAMS--> </h3>
         </a>
     </div>
     <div id="ocultarnovedades" class="contenedor">
@@ -40,10 +40,16 @@
 </div>
 <div id="ultimo"></div>
 </body>
-
+<script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
 <script>
 /*window.alert('Puedes perder algo si no abres los ojos antes de que sea tarde');
 prompt("Sugiera una fecha 00?/00?/23")*/
+
+const typed = new Typed('.typed', {
+    strings: ['NAUGES <br> DREAMS'],
+    typeSpeed: 75,
+    loop: true
+});
 
 function quitarNoved() {
     document.getElementById('novedades').style.display = 'none';

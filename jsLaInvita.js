@@ -1,3 +1,11 @@
+const typed = new Typed('.typed', {
+   strings: ['Un día yo estaba como tú; viendo algo que llamó mi atención en la universidad. Después de eso pasaron cosas tan extrañas que llegué a sentir todo como un sueño surrealista. <br> Cosas que me hicieron dudar de mi forma de actuar. Mi forma de pensar.Cosas que me hicieron hacer cosas, de las cuales no sé si soy'],
+   typeSpeed: 55
+});
+
+//const mclarens = new Typed('.boton')
+
+
 setTimeout(() => {
    var boton = document.querySelectorAll('.botones .boton');
 
