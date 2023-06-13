@@ -81,11 +81,16 @@ function siguienteParrafo(e) {
          }
       }, 1)
    }, 3000)
-
-   culpable.style.display = "none";
+   
+   culpable.removeEventListener('click', siguienteParrafo);
+   complice.removeEventListener('click', siguienteParrafo);
+   elegido.removeEventListener('click', siguienteParrafo);
+   observador.removeEventListener('click', siguienteParrafo);
+   
+   /*culpable.style.display = "none";
    complice.style.display = "none";
    observador.style.display = "none";
-   elegido.style.display = "none";
+   elegido.style.display = "none";*/
 }
 
 
