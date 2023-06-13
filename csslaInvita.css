@@ -96,13 +96,15 @@ audio {
    box-sizing: border-box;
    width: 100%;
    max-height: 80%;
+   /*background-color: rgba(0, 0, 0, 0.4);*/
    justify-content: center;
    align-items: center;
    color: aliceblue;
    font-family: 'Righteous';
    font-size: 1em;
    line-height: 1.2rem;
-   text-shadow: 0 0 10px black;
+   /*text-shadow: 0 0 30px 10 black;*/
+   text-shadow: 1px 1px 2px rgb(0, 0, 0), 0 0 1em blue, 0 0 0.2em blue;
    padding: .6rem;
 }
 
@@ -122,7 +124,7 @@ audio {
    justify-content: center;
    align-items: center;
    height: 100%;
-   width: 22%;
+   min-width: 22%;
    border-radius: .5rem;
    border-color: none;
    border-style: none;

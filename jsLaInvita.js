@@ -4,7 +4,7 @@ const typed = new Typed('.typed', {
 });
 
 //const mclarens = new Typed('.boton')
-
+var parrafo2; //PENDIENTEEEEEEEEE
 
 setTimeout(() => {
    var boton = document.querySelectorAll('.botones .boton');
@@ -55,13 +55,15 @@ function siguienteParrafo(e) {
    var texto = `De un plan que engañaría a muchas personas y al final esas mismas personas serían las encargadas de hacer ver la verdad sobre los “${palabra}”. Ahora que lo pienso, podría ser persona (en singular) en vez de personas, porque si el plan era solo para mí, entonces solo sería para ti.`
    var parrafo = document.getElementById('parrafo2');
    var elemento = document.createElement("div");
+   var contenido; //PENDIENTEEEEEE
    if (palabra == "********") {
-      var contenido = document.createTextNode(textoOpcional + " " + texto);
+      contenido = textoOpcional + " " + texto;
    } else {
-      var contenido = document.createTextNode(texto);
+      contenido = texto;
    }
-   elemento.appendChild(contenido);
-   elemento.setAttribute("class", "texto");
+   /*elemento.appendChild(contenido);*/
+   elemento.classList.add("texto");
+   elemento.classList.add("texto2");
    parrafo.appendChild(elemento);
 
    setTimeout(() => {
@@ -88,7 +90,13 @@ function siguienteParrafo(e) {
             boton[i].style.backgroundColor = `rgba(${Math.floor(Math.random() * 255)}, ${Math.floor(Math.random() * 255)}, ${Math.floor(Math.random() * 255)}, 0.5)`
          }
       }, 1)
-   }, 3000)
+   }, 20000)
+   
+   /*var padreBotones = document.getElementById('botonesPrimeros');
+   var hijosBotones = document.querySelectorAll('#botonesPrimeros .boton');
+   for (let i = 0; i < hijosBotones.length; i++) {
+      padreBotones.removeChild(hijosBotones[i]);
+   }*/
    
    culpable.removeEventListener('click', siguienteParrafo);
    complice.removeEventListener('click', siguienteParrafo);
@@ -99,7 +107,12 @@ function siguienteParrafo(e) {
    complice.style.display = "none";
    observador.style.display = "none";
    elegido.style.display = "none";*/
+   parrafo2 = new Typed('.texto2', {
+      strings: [contenido],
+      typeSpeed: 35
+   })
 }
+
 
 
 

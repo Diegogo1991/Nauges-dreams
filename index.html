@@ -34,7 +34,7 @@
         </div>
     </div>
     <video muted autoplay loop 
-        src="0.mp4" type="video/mp4">
+        src="00.mp4" type="video/mp4">
     </video>
     <div class="capa"></div>
 </div>
@@ -61,14 +61,14 @@ const HayNove = new Typed('.aviso', {
 
 const easy = new Typed('.link1', {
     strings: ['Easy'],
-    typeSpeed: 75,
+    typeSpeed: 90,
     cursorChar: '',
     loop: false
 });
 
 const jard = new Typed('.link2', {
-    strings: ['Easy'],
-    typeSpeed: 75,
+    strings: ['Hard'],
+    typeSpeed: 90,
     cursorChar: '',
     loop: false
 });
@@ -87,7 +87,7 @@ function quitarNoved() {
 function mostrarNovedades() {
     let aviso = document.getElementById('novedades');
     aviso.style.display = 'flex';
-    setTimeout(() => { aviso.style.display = 'none'; }, 4000);
+    setTimeout(() => { aviso.style.display = 'none'; }, 5000);
 }
 
 function ocultarNovedades() {

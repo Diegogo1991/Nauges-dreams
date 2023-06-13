@@ -81,8 +81,8 @@ html {
    display: none;
    top: 20%;
    border-radius: 20px;
-   width: 10%;
-   height: 10rem;
+   width: 0%;
+   height: auto;
    background: linear-gradient(rgba(255, 94, 0, 0.6), rgb(255, 136, 0, 0.6), rgb(225, 0, 255, 0.6), rgb(76, 0, 255, 0.6));
    font-size: 1rem;
    color: aliceblue;
@@ -91,9 +91,9 @@ html {
    align-items: center;
    z-index: 2;
    text-align: center;
-   padding: 10px;
+   padding: 1rem;
    box-sizing: border-box;
-   animation: novedades 1s forwards;
+   animation: novedades 2s forwards;
 }
 
 @keyframes novedades {
