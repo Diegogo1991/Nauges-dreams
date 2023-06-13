@@ -1,6 +1,6 @@
 const typed = new Typed('.typed', {
-   strings: ['Un día yo estaba como tú; viendo algo que llamó mi atención en la universidad. Después de eso pasaron cosas tan extrañas que llegué a sentir todo como un sueño surrealista. <br> Cosas que me hicieron dudar de mi forma de actuar. Mi forma de pensar.Cosas que me hicieron hacer cosas, de las cuales no sé si soy'],
-   typeSpeed: 55
+   strings: ['Un día yo estaba como tú; viendo algo que llamó mi atención en la universidad. Después de eso pasaron cosas tan extrañas que llegué a sentir todo como un sueño surrealista. <br> Cosas que me hicieron dudar de mi forma de actuar. Mi forma de pensar. Cosas que me hicieron hacer otras cosas, de las cuales no sé si soy'],
+   typeSpeed: 35
 });
 
 //const mclarens = new Typed('.boton')
@@ -20,7 +20,7 @@ setTimeout(() => {
    for (let i = 0; i < boton.length; i++) {
       boton[i].innerHTML = `${opciones[i]}`;
    }
-}, 4000)
+}, 17000)
 
 var culpable = document.getElementById('culpable');
 var complice = document.getElementById('complice');
@@ -52,7 +52,7 @@ function siguienteParrafo(e) {
    }
    var textoOpcional = "por algo o alguien para algún tipo de plan; todo solamente por ver un suceso, por estar en un lugar a esa hora.";
 
-   var texto = `Un plan que engañaría a muchas personas y al final esas mismas personas serían las encargadas de hacer ver la verdad sobre los “${palabra}”. Ahora que lo pienso, podría ser persona (en singular) en vez de personas, porque si el plan era solo para mí, entonces solo sería para ti.`
+   var texto = `De un plan que engañaría a muchas personas y al final esas mismas personas serían las encargadas de hacer ver la verdad sobre los “${palabra}”. Ahora que lo pienso, podría ser persona (en singular) en vez de personas, porque si el plan era solo para mí, entonces solo sería para ti.`
    var parrafo = document.getElementById('parrafo2');
    var elemento = document.createElement("div");
    if (palabra == "********") {

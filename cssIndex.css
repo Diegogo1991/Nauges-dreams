@@ -93,8 +93,7 @@ html {
    text-align: center;
    padding: 10px;
    box-sizing: border-box;
-   animation: novedades 1s forwards, teclear 3s steps(16);
-   /*animation: teclear 3s steps(16);*/
+   animation: novedades 1s forwards;
 }
 
 @keyframes novedades {
@@ -205,13 +204,4 @@ video {
    text-align: center;
    margin-top: 30%;
    font-size: 1.2rem;
-}
-
-@keyframes teclear {
-   from {
-      clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
-   }
-   to {
-      clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
-   }
 }
