@@ -66,15 +66,44 @@ audio {
    position: absolute;
    top: 0;
    z-index: 5;
-   background-color: rgba(0, 255, 255, 0.308);
+   /*background-color: rgba(0, 255, 255, 0.308);*/
 }
 
 .partes {
    display: flex;
    height: 30%;
    width: 90%;
-   background-color: rgba(226, 43, 98, 0.411);
+  /* background-color: rgba(226, 43, 98, 0.411);*/
    position: relative;
+   animation: aparecer 1.5s;
+}
+@keyframes aparecer {
+   0%{
+      width: 0%;
+   }
+   25%{
+      background-color: rgba(5, 247, 247, 0.5);
+   }
+   50%{
+      background-color: rgba(255, 68, 0, 0.6);
+   }
+   100%{
+      width: 90%;
+   }
+}
+.partes .texto{
+   display: flex;
+   box-sizing: border-box;
+   width: 100%;
+   max-height: 80%;
+   justify-content: center;
+   align-items: center;
+   color: aliceblue;
+   font-family: 'Righteous';
+   font-size: 1em;
+   line-height: 1.2rem;
+   text-shadow: 0 0 10px black;
+   padding: .6rem;
 }
 
 .partes .botones {
@@ -85,5 +114,22 @@ audio {
    height: 20%;
    position: absolute;
    bottom: 0%;
-   background-color: rgba(0, 0, 0, 0.432);
+   /*background-color: rgba(0, 0, 0, 0.432);*/
+}
+
+.botones .boton{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 100%;
+   width: 22%;
+   border-radius: .5rem;
+   border-color: none;
+   border-style: none;
+   background-color: rgba(6, 245, 245, 0.527);
+   color: white;
+   text-shadow: 0 0 10px black;
+   text-align: center;
+   font-family: 'Righteous';
+   font-size: .9em;
 }
