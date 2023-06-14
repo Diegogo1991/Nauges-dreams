@@ -57,7 +57,7 @@ audio {
 }
 
 #content {
-   height: 100vh;
+   height: 90vh;
    width: 100vw;
    display: flex;
    justify-content: space-evenly;
@@ -134,4 +134,27 @@ audio {
    text-align: center;
    font-family: 'Righteous';
    font-size: .9em;
+   animation: aparecer 2s ;
+}
+@keyframes aparecer {
+   0% {
+      width: 0%;
+   }
+   100% {
+      width: auto;
+   }
+}
+
+#parrafo3{
+   position: relative;
+}
+
+.partes .texto3{
+   position: absolute;
+   top: 0;
+}
+
+#parrafo3 .botones{
+   position: absolute;
+   top: 50%;
 }
