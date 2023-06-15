@@ -158,3 +158,36 @@ audio {
    position: absolute;
    top: 50%;
 }
+
+/*#contentConocimiento{
+      height: auto;
+      width: 100vw;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      flex-direction: column;
+      position: relative;
+      top: 0;
+      z-index: 5;
+      background-color: rgba(0, 255, 255, 0.308);
+}*/
+
+#conocimiento{
+   display: flex;
+   box-sizing: border-box;
+   width: 90%;
+   min-width: 90%;
+   max-height: auto;
+   /*background-color: rgba(0, 0, 0, 0.4);*/
+   justify-content: center;
+   align-items: center;
+   color: aliceblue;
+   font-family: 'Righteous';
+   font-size: 1em;
+   line-height: 1.3rem;
+   /*text-shadow: 0 0 30px 10 black;*/
+   text-shadow: 1px 1px 2px rgb(0, 0, 0), 0 0 1em blue, 0 0 0.2em blue;
+   padding: .6rem;
+   position: absolute;
+   top: 1rem;
+}

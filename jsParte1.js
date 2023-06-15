@@ -10,7 +10,7 @@ const pregunta = new Typed('.pregunAuto', {
 var paraBoton11 = document.querySelector('#boton1 h4').textContent;
 const boton11 = new Typed('.boton11', {
    strings: [paraBoton11],
-   typeSpeed: 75,
+   typeSpeed: 200,
    cursorChar: '',
    loop: false
 });
@@ -18,10 +18,23 @@ const boton11 = new Typed('.boton11', {
 var paraBoton22 = document.querySelector('#boton2 h4').textContent;
 const boton22 = new Typed('.boton22', {
    strings: [paraBoton22],
-   typeSpeed: 75,
+   typeSpeed: 200,
    cursorChar: '',
    loop: false
 });
+
+//FUNCION PARA PREGUNTAS DINAMICAS
+/*var contePreguntas = "vacio";
+
+function movimiento() {
+   var textPregunta = document.querySelector('.pregunta .pregunAutos').textContent;
+   contePreguntas = new Typed('.pregunAutos', {
+      strings: [textPregunta],
+      typeSpeed: 322,
+      cursorChar: '',
+      loop: false
+   });
+}*/
 
 //CAMBIAR COLORES OPCIONES
 
@@ -66,6 +79,7 @@ function mostrarHero() {
 
    cambiarFondo();
 }
+var movimiento;
 function mostrarHero2() {
    cambiarColores('Hero2');
 
@@ -75,6 +89,17 @@ function mostrarHero2() {
    ocultarHeros('Hero5');
 
    cambiarFondo();
+
+   var textPregunta = document.getElementById('textPregunta').textContent;
+
+   movimiento = new Typed('.typed', {
+      strings: [textPregunta],
+      typeSpeed: 322,
+      cursorChar: '',
+      loop: false
+   });
+   
+
 }
 function mostrarHero3() {
    cambiarColores('Hero3');
@@ -84,6 +109,13 @@ function mostrarHero3() {
    ocultarHeros('Hero');
 
    cambiarFondo();
+   var textPregunta = document.getElementById('probandu').textContent; 
+   movimiento = new Typed('.pregunAutos', {
+      strings: ["ago de texto"],
+      typeSpeed: 75,
+      cursorChar: '',
+      loop: false
+   })
 }
 function mostrarHero4() {
    cambiarColores('Hero4');

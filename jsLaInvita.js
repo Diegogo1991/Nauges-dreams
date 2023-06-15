@@ -26,6 +26,7 @@ var complice = document.getElementById('complice');
 var elegido = document.getElementById('elegido');
 var observador = document.getElementById('observador');
 
+//siguiente parrafo botones
 culpable.addEventListener('click', siguienteParrafo);
 complice.addEventListener('click', siguienteParrafo);
 elegido.addEventListener('click', siguienteParrafo);
@@ -33,51 +34,17 @@ observador.addEventListener('click', siguienteParrafo);
 
 var parrafo2; //PENDIENTEEEEEEEEE
 var parrafo3; //PARA NEW TYPED
-var venganza = document.getElementById('parrafo2'), interes = document.getElementById('parrafo2'), verdad = document.getElementById('parrafo2');
+var venganza = 0, interes = 0, verdad = 0;
 
-function mostrarParrafo3(e) {
-   console.log("funciona");
-   let palabra;
-   switch (e.target.id) {
-      case "venganza":
-         palabra = "hechos";
-         break;
-      case "interes":
-         palabra = "********";
-         break;
-      case "verdad":
-         palabra = "crímenes";
-         break;
-      default:
-         break;
-   }
-
-   var texto = `Los sueños pueden ser una fachada precisamente de los detalles de aquel plan de tantos ${palabra}.`;
-   var parrafo = document.getElementById('parrafo3');
-   var pizarra = document.createElement("div");
-   pizarra.classList.add("texto");
-   pizarra.classList.add("texto3");
-
-   parrafo.appendChild(pizarra);
-
-   setTimeout(() => {
-      var botones = document.createElement("div");
-      botones.setAttribute("class", "botones");
-      parrafo.appendChild(botones);
-
-      botones.innerHTML = '<button id="venganza" class="boton">¿Por qué soñamos?</button>';
-   }, 5000)
-
-   parrafo3 = new Typed('.texto3', {
-      strings: [texto],
-      typeSpeed: 35
-   })
-
-}
-
-venganza.addEventListener('click', mostrarParrafo3);
+//parrafo3 botones
+/*venganza.addEventListener('click', mostrarParrafo3);
 interes.addEventListener('click', mostrarParrafo3);
-verdad.addEventListener('click', mostrarParrafo3);
+verdad.addEventListener('click', mostrarParrafo3);*/
+
+var sueños;
+
+//para ultimo parrafo
+var porqueSoñar;
 
 function siguienteParrafo(e) {
    var palabra;
@@ -130,6 +97,14 @@ function siguienteParrafo(e) {
       }*/
       botones.innerHTML = '<button id="venganza" class="boton">¿Por venganza?</button> <button id = "interes" class="boton" >¿Por interés?</button> <button id="verdad" class="boton">¿Para decirte la verdad?</button>';
 
+      venganza = document.getElementById('venganza');
+      interes = document.getElementById('interes');
+      verdad = document.getElementById('verdad');
+
+      venganza.addEventListener('click', mostrarParrafo3);
+      interes.addEventListener('click', mostrarParrafo3);
+      verdad.addEventListener('click', mostrarParrafo3);
+
       setTimeout(() => {
          var boton = document.querySelectorAll('#parrafo2 .botones .boton');
 
@@ -157,13 +132,74 @@ function siguienteParrafo(e) {
 
    parrafo2 = new Typed('.texto2', {
       strings: [contenido],
-      typeSpeed: 35
+      typeSpeed: 35,
+      cursorChar: ''
    })
 
-   venganza = document.getElementById('venganza');
-   interes = document.getElementById('interes');
-   verdad = document.getElementById('verdad');
+   
 }
+
+
+function resetear() {
+   console.log("borraré todo");
+   document.getElementById('content').innerHTML = '<div id="conocimiento" class="conocimiento">Hola</div>';
+   var contenido = "¿Por qué soñamos? <br> Como debo proteger mi conocimiento y decir todo lo que pienso implica un riesgo, debo asegurarme de ir lento. Me gustaría contar todo de inmediato, sin “cápsulas” ni metáforas, así me libraría más rápido de la culpa, pero todo ha sido tan extraño que debo pensar en mi seguridad. <br> Hacer todo lo que hice te revuelve la cabeza. Tantas cosas probablemente en más de un año. Además, para que el plan salga bien y sepas la verdad, debo ir haciendo cambios poco a poco. Si eres nuevo por aquí probablemente no entiendas de que hablo, sin embargo, ya hay unas personas que empezaron a notar los cambios(evolución) de esta verdad ¡qué digo verdad! de esta página. <br> ¿Recuerdas lo de los links ? ¿Cambió cierto ? ";
+   porqueSoñar = new Typed('.conocimiento', {
+      strings: [contenido],
+      typeSpeed: 35,
+      cursorChar: ''
+   }) 
+}
+
+function mostrarParrafo3(e) {
+
+   document.getElementById('venganza').removeEventListener('click', mostrarParrafo3);
+   document.getElementById('interes').removeEventListener('click', mostrarParrafo3);
+   document.getElementById('verdad').removeEventListener('click', mostrarParrafo3);
+
+   console.log("funciona");
+   let palabra;
+   switch (e.target.id) {
+      case "venganza":
+         palabra = "hechos";
+         break;
+      case "interes":
+         palabra = "********";
+         break;
+      case "verdad":
+         palabra = "crímenes";
+         break;
+      default:
+         break;
+   }
+
+   var texto = `Los sueños pueden ser una fachada precisamente de los detalles de aquel plan de tantos ${palabra}.`;
+   var parrafo = document.getElementById('parrafo3');
+   var pizarra = document.createElement("div");
+   pizarra.classList.add("texto");
+   pizarra.classList.add("texto3");
+
+   parrafo.appendChild(pizarra);
+
+   setTimeout(() => {
+      var botones = document.createElement("div");
+      botones.setAttribute("class", "botones");
+      parrafo.appendChild(botones);
+
+      botones.innerHTML = '<button id="sueños" class="boton">¿Por qué soñamos?</button>';
+
+      sueños = document.getElementById('sueños');
+      sueños.addEventListener('click', resetear);
+   }, 5000)
+
+   parrafo3 = new Typed('.texto3', {
+      strings: [texto],
+      typeSpeed: 35,
+      cursorChar: ''
+   })
+
+}
+
 
 
 
