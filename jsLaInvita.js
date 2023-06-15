@@ -5,23 +5,36 @@ const typed = new Typed('.typed', {
 });
 
 setTimeout(() => {
-   var boton = document.querySelectorAll('.botones .boton');
-   
-   for (let i = 0; i < boton.length; i++) {
-      boton[i].style.backgroundColor = `rgba(${Math.floor(Math.random() * 255)}, ${Math.floor(Math.random() * 255)}, ${Math.floor(Math.random() * 255)}, 0.5)`
-   }
-}, 1)
+   var botonesPrimeros = document.getElementById('botonesPrimeros');
+   botonesPrimeros.innerHTML = '<button id="culpable" class="boton"></button> <button id = "complice" class="boton" ></button> <button id="elegido" class="boton"></button> <button id="observador" class="boton"></button>';
 
-setTimeout(() => {
+   setTimeout(() => {
+      var boton = document.querySelectorAll('.botones .boton');
+
+      for (let i = 0; i < boton.length; i++) {
+         boton[i].style.backgroundColor = `rgba(${Math.floor(Math.random() * 255)}, ${Math.floor(Math.random() * 255)}, ${Math.floor(Math.random() * 255)}, 0.5)`
+      }
+   }, 1);
+
    var boton = document.querySelectorAll('.botones .boton');
    /*boton.forEach(element => (element).style.display = "flex");*/
    var opciones = ["Culpable", "Complice", "Elegido", "Observador"];
    for (let i = 0; i < boton.length; i++) {
       boton[i].innerHTML = `${opciones[i]}`;
    }
+
+   var culpable = document.getElementById('culpable');
+   var complice = document.getElementById('complice');
+   var elegido = document.getElementById('elegido');
+   var observador = document.getElementById('observador');
+
+   culpable.addEventListener('click', siguienteParrafo);
+   complice.addEventListener('click', siguienteParrafo);
+   elegido.addEventListener('click', siguienteParrafo);
+   observador.addEventListener('click', siguienteParrafo);
 }, 17000)
 
-var culpable = document.getElementById('culpable');
+/*var culpable = document.getElementById('culpable');
 var complice = document.getElementById('complice');
 var elegido = document.getElementById('elegido');
 var observador = document.getElementById('observador');
@@ -30,7 +43,7 @@ var observador = document.getElementById('observador');
 culpable.addEventListener('click', siguienteParrafo);
 complice.addEventListener('click', siguienteParrafo);
 elegido.addEventListener('click', siguienteParrafo);
-observador.addEventListener('click', siguienteParrafo);
+observador.addEventListener('click', siguienteParrafo);*/
 
 var parrafo2; //PENDIENTEEEEEEEEE
 var parrafo3; //PARA NEW TYPED

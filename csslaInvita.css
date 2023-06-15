@@ -133,7 +133,7 @@ audio {
    text-shadow: 0 0 10px black;
    text-align: center;
    font-family: 'Righteous';
-   font-size: clamp(8px, 4vw - .5vh, 20px);
+   font-size: clamp(8px, 4vw - 1vh, 20px);
    animation: aparecer 2s ;
 }
 @keyframes aparecer {
