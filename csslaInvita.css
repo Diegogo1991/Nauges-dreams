@@ -174,20 +174,51 @@ audio {
 
 #conocimiento{
    display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
    box-sizing: border-box;
    width: 90%;
    min-width: 90%;
-   max-height: auto;
+   height: auto;
+   max-height: 100vh;
    /*background-color: rgba(0, 0, 0, 0.4);*/
    justify-content: center;
    align-items: center;
    color: aliceblue;
    font-family: 'Righteous';
-   font-size: 1em;
+   /*font-size: 1em;*/
    line-height: 1.3rem;
    /*text-shadow: 0 0 30px 10 black;*/
    text-shadow: 1px 1px 2px rgb(0, 0, 0), 0 0 1em blue, 0 0 0.2em blue;
    padding: .6rem;
    position: absolute;
    top: 1rem;
+   font-size: clamp(8px, 4vw - 1vh, 20px);
+   /*font-size: clamp(8px, 4vw - .5vw, 20px);*/
+}
+
+#conocimiento .penultimos{
+   display: flex;
+   justify-content: space-evenly;
+   height: 10vh;
+   width: 100%;
+   margin-top: 1rem;
+}
+
+.penultimos .boton{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   text-align: center;
+   height: auto;
+   width: 40%;
+   border-radius: 1rem;
+   border: none;
+   height: 100%;
+   background-color: rgba(6, 245, 245, 0.527);
+   color: white;
+   text-shadow: 0 0 10px black;
+   font-family: 'Righteous';
+   font-size: clamp(8px, 4vw - 1vh, 20px);
 }
