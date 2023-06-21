@@ -78,7 +78,7 @@ html {
 
 #novedades {
    position: absolute;
-   display: none;
+   display: flex;
    top: 20%;
    border-radius: 20px;
    width: 0%;

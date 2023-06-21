@@ -15,12 +15,12 @@
         </a>
     </div>
     <div id="ocultarnovedades" class="contenedor">
-        <div id="novedades" class="hayNovedad">
+        <!--<div id="novedades" class="hayNovedad">
             -Tengo unas "pequeñas" confesiones al final. <br>
             <br>
             PISTA: Cuando las letras están encerradas <br>
             es porque quieren decir algo y eso quiere decir algo.
-        </div>
+        </div>-->
         <div class="opciones">
             <div class="opcion1"> 
                 <a class="link1" href="Parte1.html"> Easy</a>
@@ -80,25 +80,49 @@ const jard = new Typed('.link2', {
     loop: false
 });*/
 
-function quitarNoved() {
+/*function quitarNoved() {
     document.getElementById('novedades').style.display = 'none';
-}
+}*/
 
+var pistas;
 function mostrarNovedades() {
-    let aviso = document.getElementById('novedades');
+    console.log("funciona");
+    /*let aviso = document.getElementById('novedades');
     aviso.style.display = 'flex';
-    setTimeout(() => { aviso.style.display = 'none'; }, 5000);
+    setTimeout(() => { aviso.style.display = 'none'; }, 5000);*/
+    var contend = document.getElementById('ocultarnovedades');
+    var novedades = document.createElement('div');
+    novedades.classList.add('hayNovedad');
+    novedades.setAttribute('id', 'novedades');
+    contend.appendChild(novedades);
+    avisoNov.removeEventListener('click', mostrarNovedades);
+
+    setTimeout(()=>{
+        pistas = new Typed('.hayNovedad', {
+            strings: ['-Tengo unas "pequeñas" confesiones al final. <br> <br> PISTA: Cuando las letras están encerradas es porque quieren decir algo y eso quiere decir algo.'],
+            typeSpeed: 30,
+            cursorChar: '',
+            loop: false
+        })
+    }, 1000)
+    
+    setTimeout(()=>{
+        var contend = document.getElementById('ocultarnovedades');
+        var novedades = document.getElementById('novedades');
+        contend.removeChild(novedades);
+        avisoNov.addEventListener('click', mostrarNovedades);
+    }, 10000)
 }
 
-function ocultarNovedades() {
+/*function ocultarNovedades() {
     document.getElementById('novedades').style.display = 'none';
-}
+}*/
 
-let avisoNov = document.getElementById('aviso');
+var avisoNov = document.getElementById('aviso');
 avisoNov.addEventListener('click', mostrarNovedades);
 
-let ocultNov = document.getElementById('novedades');
-ocultNov.addEventListener('click', ocultarNovedades);
+/*let ocultNov = document.getElementById('novedades');
+ocultNov.addEventListener('click', ocultarNovedades);*/
 
 /*let ocultNoved = document.getElementById('ocultarnovedades');
 ocultNoved.addEventListener('click', ocultarNovedades)*/
