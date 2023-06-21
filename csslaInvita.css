@@ -182,7 +182,7 @@ audio {
    width: 90%;
    min-width: 90%;
    height: auto;
-   max-height: 100vh;
+   /*max-height: 100vh;*/
    /*background-color: rgba(0, 0, 0, 0.4);*/
    justify-content: center;
    align-items: center;
@@ -191,7 +191,7 @@ audio {
    /*font-size: 1em;*/
    line-height: 1rem;
    /*text-shadow: 0 0 30px 10 black;*/
-   text-shadow: 1px 1px 2px rgb(0, 0, 0), 0 0 1em blue, 0 0 0.2em blue;
+   text-shadow: 1px 1px 2px rgb(0, 0, 0), 0 0 1em rgb(0, 0, 0), 0 0 0.2em rgb(0, 204, 255);
    padding: .6rem;
    position: absolute;
    top: 1rem;

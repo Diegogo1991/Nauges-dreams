@@ -12,20 +12,23 @@
 </head>
 <body>
    <div id="hero">
-      <video muted autoplay loop src="00.mp4" type="video/mp4">
+      <video muted autoplay loop src="000.mp4" type="video/mp4">
       </video>
       <div class="capa"></div>
    </div>
+   <div id="contentInfo">
+
+   </div>
    <div id="content">
       <div class="partes">
-         <div id="iniHard">
-            <p>Casi siempre tenemos más de dos opciones, solo falta crearla, o creerla, o tenerla, depende de quien hayas sido en mi vida</p>
+         <div id="iniHard" class="iniHard">
+            <!--Casi siempre tenemos más de dos opciones, solo falta crearla, o creerla, o tenerla, depende de quien hayas sido en tu vida-->
          </div>
       </div>
       <div class="partes" id="parteContra" >
          <div id="opcCtr">
-            <p>
-               Contraseña directa:
+            <p id="pContraseña" class="contraseña">
+               <!--Contraseña directa:-->
             </p>
             <input id="contraseña" type="text">
             <input id="enviarCtr" type="submit" value="Saber la razón">
@@ -34,7 +37,7 @@
       </div>
       <div class="partes">
          <div class="opciones">
-            <p>1 pregunta</p>
+            1 pregunta
          </div>
          <div class="opciones">
             Preguntas
@@ -46,7 +49,7 @@
    </audio>
    <div id="ultimo"></div>
 </body>
-
+<script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
 <script src="jsHARD.js"></script>
 
 </html>

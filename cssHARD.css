@@ -12,7 +12,7 @@
 }
 
 
-html {
+/*html {
    font-size: 16px;
 
    @media screen and (max-width: 340px) {
@@ -22,7 +22,7 @@ html {
    @media screen and (min-width: 1000px) {
       font-size: 20px;
    }
-}
+}*/
 
 #hero {
    display: flex;
@@ -65,22 +65,69 @@ audio{
    position: absolute;
    top: 0;
    z-index: 5;
-   background-color: rgba(0, 255, 255, 0.308);
+   /*background-color: rgba(0, 255, 255, 0.308);*/
+}
+
+#contentInfo{
+   width: 100vw;
+   height: 90vh;
+   display: none;
+   margin: 0;
+   justify-content: center;
+   align-items: center;
+   /*flex-direction: column;*/
+   position: absolute;
+   top: 0;
+   z-index: 15;
+}
+
+#informacion{
+   display: flex;
+   width: 90%;
+   position: relative;
+   height: auto;
+   background: linear-gradient(45deg, rgba(255, 94, 0, 0.6), rgba(255, 0, 170, 0.6), rgba(38, 0, 255, 0.6));
+   z-index: 15;
+   border-radius: .5rem;
+   font-size: clamp(10px, 3vw, 20px);
+   line-height: 1.2rem;
+   justify-content: center;
+   align-items: center;
+   color: aliceblue;
+   font-family: 'Righteous';
+   /*font-size: 1em;*/
+   line-height: 1rem;
+   /*text-shadow: 0 0 30px 10 black;*/
+   text-shadow: 1px 1px 2px rgb(0, 0, 0), 0 0 1em rgb(0, 0, 0), 0 0 0.2em rgb(0, 204, 255);
+   padding: .6rem;
+   /*font-size: clamp(8px, 4vw - 1vh, 20px);*/
+   animation: animate 1s linear infinite;
+}
+
+@keyframes animate {
+   0% {
+      filter: hue-rotate(0deg);
+   }
+
+   100% {
+      filter: hue-rotate(360deg);
+   }
 }
 
 .partes{
    display: flex;
    height: 27%;
    width: 90%;
-   background-color: rgba(226, 43, 98, 0.411);
+   /*background-color: rgba(226, 43, 98, 0.411);*/
    position: relative;
    justify-content: center;
+   font-size: clamp(10px, 4vw, 20px);
 }
 
 .partes #iniHard{
    width: 80%;
    height: max-content;
-   background-color: rgba(238, 255, 0, 0.5);
+   /*background-color: rgba(255, 8, 0, 0.5);*/
    border-radius: 1rem;
    align-items: center;
    padding: 1rem 1rem 1rem 1rem;
@@ -89,13 +136,12 @@ audio{
    text-shadow: 0 0 10px black;
    /*font-family: 'Kanit', sans-serif;*/
    font-family: 'Righteous';
-   line-height: 1.2rem;
 }
 
 #opcCtr{
    width: 55%;
    height: 100%;
-   background-color: rgba(3, 255, 171, 0.37);
+   /*background-color: rgba(3, 255, 171, 0.37);*/
    display: flex;
    justify-content: space-evenly;
    align-items: center;
@@ -109,7 +155,7 @@ audio{
    align-items: center;
    width: 100%;
    height: calc((100% / 4));
-   background-color: rgba(137, 43, 226, 0.397);
+   /*background-color: rgba(137, 43, 226, 0.397);*/
    position: absolute;
    top: 0;
    color: aliceblue;
@@ -135,6 +181,7 @@ audio{
    /*font-family: 'Kanit', sans-serif;*/
    font-family: 'Righteous';
    line-height: 1.2rem;
+   border-radius: .5rem;
 }
 #enviarCtr{
    bottom: 0%;
