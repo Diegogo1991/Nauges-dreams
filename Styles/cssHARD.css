@@ -170,6 +170,7 @@ audio{
    width: 100%;
    height: calc((100% / 4) );
    position: absolute;
+   text-align: center;
 }
 #contraseña{
    background: rgba(255, 136, 0, 0.596);
@@ -181,12 +182,12 @@ audio{
    /*font-family: 'Kanit', sans-serif;*/
    font-family: 'Righteous';
    line-height: 1.2rem;
-   border-radius: .5rem;
+   border-radius: .4rem;
 }
 #enviarCtr{
    bottom: 0%;
    border: none;
-   border-radius: 1rem;
+   border-radius: .4rem;
    color: aliceblue;
    text-shadow: 0 0 10px black;
    font-family: 'Righteous';
@@ -203,7 +204,7 @@ audio{
    height: 30%;
    width: 45%;
    background: rgba(77, 243, 0, 0.527);
-   border-radius: 1rem;
+   border-radius: .4rem;
    justify-content: center;
    align-items: center;
    color: aliceblue;
@@ -211,4 +212,57 @@ audio{
    text-shadow: 0 0 10px black;
    font-family: 'Righteous';
    font-weight: lighter;
+}
+
+.preguntaL{
+   display: flex;
+   /*justify-content: space-evenly;*/
+   flex-direction: column;
+   align-items: center;
+   height: 30vh;
+   width: 90vw;
+   background-color: rgba(226, 43, 98, 0.411);
+   position: relative;
+   justify-content: center;
+   font-size: clamp(10px, 4vw, 20px);
+   text-align: center;
+   color: white;
+   text-shadow: 0 0 10px black;
+   font-family: 'Righteous';
+   padding: 0;
+}
+
+.preguntaL .opcion{
+   display: flex;
+   height: 40%;
+   width: 100%;
+   background-color: rgba(21, 252, 0, 0.411);
+   margin: .5rem 0;
+   justify-content: space-evenly;
+   align-items: center;
+}
+
+.preguntaL .opcion input{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   text-align: center;
+   width: 90%;
+   height: 90%;
+   border: none;
+   border-radius: .4rem;
+   color: aliceblue;
+   text-shadow: 0 0 10px black;
+   font-family: 'Righteous';
+   background-color: rgba(210, 105, 30, 0.623);
+}
+
+.preguntaL .opcion .opcionn{
+   display: flex;
+   align-items: center;
+   justify-content: space-evenly;
+   width: 45%;
+   height: 90%;
+   background-color: rgba(0, 236, 225, 0.411);
+   border-radius: .5rem;
 }

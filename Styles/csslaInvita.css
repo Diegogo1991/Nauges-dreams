@@ -97,8 +97,8 @@ audio {
    align-items: center;
    color: aliceblue;
    font-family: 'Righteous';
-   font-size: clamp(8px, 4vw - .5vh, 20px);
-   line-height: 1.2rem;/*clamp(1rem, 1rem + 1vh, 1.5rem);*/
+   font-size: clamp(8px, 3vh - 1vw, 17px);
+   line-height: 1rem;/*clamp(1rem, 1rem + 1vh, 1.5rem);*/
    /*text-shadow: 0 0 30px 10 black;*/
    text-shadow: 1px 1px 2px rgb(0, 0, 0), 0 0 1em blue, 0 0 0.2em blue;
    /*padding: .6rem;*/
@@ -134,7 +134,7 @@ audio {
    text-shadow: 0 0 10px black;
    text-align: center;
    font-family: 'Righteous';
-   font-size: clamp(8px, 4vw - .5vh, 20px);
+   font-size: clamp(8px, 3vh - 1vw, 17px);
    animation: aparecer 2s ;
 }
 @keyframes aparecer {
@@ -196,7 +196,8 @@ audio {
    position: absolute;
    top: 1rem;
    font-size: clamp(8px, 4vw - .5vh, 20px);
-   /*font-size: clamp(8px, 4vw - .5vw, 20px);*/
+
+   /*font-size: clamp(8px, 3vh - 1vw, 17px);;*/ /*REVISARRR*/
 }
 
 #conocimiento .penultimos{

@@ -170,12 +170,12 @@ function ellaPregunto() {
 function resetear() {
    console.log("borraré todo");
    document.getElementById('content').innerHTML = '<div id="conocimiento" class="conocimiento"></div>';
-   var contenido = '¿Por qué soñamos? <br> Como debo proteger mi conocimiento y decir todo lo que pienso implica un riesgo, debo asegurarme de ir lento. Me gustaría contar todo de inmediato, sin “cápsulas” ni metáforas, así me libraría más rápido de la culpa, pero todo ha sido tan extraño que debo pensar en mi seguridad. <br> Hacer todo lo que hice te revuelve la cabeza. Tantas cosas probablemente en más de un año. Además, para que el plan salga bien y sepas la verdad, debo ir haciendo cambios poco a poco. Si eres nuevo por aquí probablemente no entiendas de que hablo, sin embargo, ya hay unas personas que empezaron a notar los cambios(evolución) de esta verdad ¡qué digo verdad! de esta página. <br> ¿Recuerdas lo de los links ? ¿Cambió cierto ? <br> <div class="penultimos"> <a class="boton" href="psique.html">Si cambiaron</a> <button id="ellaUnaVez" class="boton">No importan los links</button> </div>';
+   var contenido = '¿Por qué soñamos? <br> Como debo proteger mi conocimiento y decir todo lo que pienso implica un riesgo, debo asegurarme de ir lento. Me gustaría contar todo de inmediato, sin “cápsulas” ni metáforas, así me libraría más rápido de la culpa, pero todo ha sido tan extraño que debo pensar en mi seguridad. <br> Hacer todo lo que hice te revuelve la cabeza. Tantas cosas probablemente en más de un año. Además, para que el plan salga bien y sepas la verdad, debo ir haciendo cambios poco a poco. Si eres nuevo por aquí probablemente no entiendas de que hablo, sin embargo, ya hay unas personas que empezaron a notar los cambios(evolución) de esta verdad ¡qué digo verdad! de esta página. <br> ¿Recuerdas lo de los links ? ¿Cambió cierto ? <br> <div class="penultimos"> <a class="boton" href="psique.html">Si cambiaron</a> <button id="ellaUnaVez" onClick="ellaPregunto()" class="boton">No importan los links</button> </div>';
 
-   setInterval(() => {
+   /*setTimeout(() => {
       var evidencias = document.getElementById('ellaUnaVez');
       evidencias.addEventListener('click',ellaPregunto);
-   }, 1000)
+   }, 100)*/
 
    porqueSoñar = new Typed('.conocimiento', {
       strings: [contenido],
