@@ -11,6 +11,9 @@ document.addEventListener("DOMContentLoaded", function () {
 //FUNCION FONDO ALEATORIA
 function fondoAleatorie() {
    var indice = Math.floor(Math.random() * 5);
+   if (indice == 0) {
+      indice = 1;
+   }
    var video = document.getElementById('video');
    video.src = `./src/VIDEOSLISTOS/FONDOS/${indice}.mp4`;
 }
@@ -174,12 +177,25 @@ function siguienteParrafo(e) {
    
 }
 
-var ella;
+function ultimoTexto() {
+   document.getElementById('content').innerHTML = '<div id="conocimiento" class="conocimiento"></div>'
+   new Typed('.conocimiento', {
+      strings: ['Después de una semana. Ten paciencia. Nos vemos.'],
+      typeSpeed: 35,
+      cursorChar: ''
+   })
 
+   setTimeout(() => {
+      window.location.replace('index.html');
+   }, 3000)
+}
+
+var ella;
+var evidencias;
 function ellaPregunto() {
    document.getElementById('content').innerHTML = '<div id="conocimiento" class="conocimiento"></div>';
 
-   var contenido = 'Ella me preguntó una vez: "¿Qué pasará si el plan no sale como crees? ¿Qué sucederá si todo lo que has hecho no es visto ni recordado por nadie?", mientras se reía. Yo me reí aún más fuerte porque la pregunta es estúpida; pasaría lo mismo que si no lo hiciera, nada. <br> Para empezar, si estás leyendo esto es porque sí ocurrió. Confieso que deseo que esto sea visto y reflexionado por varias personas, aunque me conformaría con solo una, pero no lo hago por o para nadie. Lo he dicho incluso en una de las clases que formaron parte de esto. Lo hago por y para mí. <br> Bueno, eso es lo que quiero hacerte creer. <br> Solo analiza: si pienso que aquí todo se olvida rápidamente y la gente no se da cuenta de lo que sucede y de lo "malo" que hice, ¿por qué seguiría haciéndolo? Aquellos que me conocen saben que cuando me preguntan "¿qué sería lo peor que podría pasar?", respondo: quedar con vida. <br>  No solo quiero que sea visto por varias personas; algo que deseo más que eso es confundirte con esto y que la verdad llegue hasta donde tú decidas. Si confieso algo y nadie escucha, no es asunto mío. Libero la tensión y el único en paz seré yo. Tampoco he considerado arrepentirme. <br> Sin embargo, no lo dejaré todo tan fácil y evidente, ni siquiera podría hacerlo si quisiera. Tengo tantas pruebas con <br> <div class="evidencias"> <button class="botonev"> fotos,</button> <button class="botonev"> chats, </button>  <button class="botonev"> videos, </button>  <button class="botonev"> audios, </button> <button class="botonev"> textos, </button> </div> que a veces no sé ni cómo hacer todo. Solo confío, o confía, en que después de una semana por cada noche se irá revelando un “sueño”, uno más aparte de los tantos camuflados en las imágenes aleatorias de cada pregunta. Y me da igual si ves esto solo una vez. De hecho, lo mejor para ti sería así, porque recuerda la primera advertencia. ¿¡Seré idiota!? ¿Por qué creo que recordarás la primera advertencia si ni siquiera recuerdas lo que ocurrió en las fechas que aparecen? ¿Comprendes a qué me refiero? Sé que no lo haces. Nuestra sombra, aquella que me interrogó, tampoco lo hace.'
+   var contenido = 'Ella me preguntó una vez: "¿Qué pasará si el plan no sale como crees? ¿Qué sucederá si todo lo que has hecho no es visto ni recordado por nadie?", mientras se reía. Yo me reí aún más fuerte porque la pregunta es estúpida; pasaría lo mismo que si no lo hiciera, nada. <br> Para empezar, si estás leyendo esto es porque sí ocurrió. Confieso que deseo que esto sea visto y reflexionado por varias personas, aunque me conformaría con solo una, pero no lo hago por o para nadie. Lo he dicho incluso en una de las clases que formaron parte de esto. Lo hago por y para mí. <br> Bueno, eso es lo que quiero hacerte creer. <br> Solo analiza: si pienso que aquí todo se olvida rápidamente y la gente no se da cuenta de lo que sucede y de lo "malo" que hice, ¿por qué seguiría haciéndolo? Aquellos que me conocen saben que cuando me preguntan "¿qué sería lo peor que podría pasar?", respondo: quedar con vida. <br>  No solo quiero que sea visto por varias personas; algo que deseo más que eso es confundirte con esto y que la verdad llegue hasta donde tú decidas. Si confieso algo y nadie escucha, no es asunto mío. Libero la tensión y el único en paz seré yo. Tampoco he considerado arrepentirme. <br> Sin embargo, no lo dejaré todo tan fácil y evidente, ni siquiera podría hacerlo si quisiera. Tengo tantas pruebas con <br> <div class="evidencias" id="evidencias"> <button class="botonev"> fotos,</button> <button class="botonev"> chats, </button>  <button class="botonev"> videos, </button>  <button class="botonev"> audios, </button> <button class="botonev"> textos, </button> </div> que a veces no sé ni cómo hacer todo. Solo confío, o confía, en que después de una semana por cada noche se irá revelando un “sueño”, uno más aparte de los tantos camuflados en las imágenes aleatorias de cada pregunta. Y me da igual si ves esto solo una vez. De hecho, lo mejor para ti sería así, porque recuerda la primera advertencia. ¿¡Seré idiota!? ¿Por qué creo que recordarás la primera advertencia si ni siquiera recuerdas lo que ocurrió en las fechas que aparecen? ¿Comprendes a qué me refiero? Sé que no lo haces. Nuestra sombra, aquella que me interrogó, tampoco lo hace.'
 
    ella = new Typed('.conocimiento', {
       strings: [contenido],
@@ -187,8 +203,9 @@ function ellaPregunto() {
       cursorChar: ''
    })
    setTimeout(() => {
-      
-   },30000)
+      evidencias = document.getElementById('evidencias');
+      evidencias.addEventListener('click', ultimoTexto)
+   },85000)
 }
 
 
