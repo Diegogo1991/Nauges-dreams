@@ -1,6 +1,6 @@
 //FUNCION MUSICA ALEATORIA
 function musicAleatorie() {
-   var indice = Math.floor(Math.random() * 18);
+   var indice = Math.floor(Math.random() * 19);
    var audio = document.getElementById('audio');
    audio.src = `./src/MUSICALISTA/${indice}.mp3`;
 }
@@ -26,7 +26,7 @@ const enunciado = new Typed('.iniHard', {
 });
 
 var contraseña = new Typed('.contraseña', {
-   strings: ['Contraseña directa:'],
+   strings: ['Contraseña:'],
    typeSpeed: 150,
    cursorChar: ''
 });
@@ -48,7 +48,7 @@ function mostrarRazon() {
    content.appendChild(formacion);
 
    info = new Typed('.informacion', {
-      strings: ['Esto es a prueba de tontos. No voy a confesar todo lo que he hecho a cualquier persona distraída como tú. Soy un ludópata, al igual que tú, y me gusta ganar. ¿No sabes qué significa "ser" ludópata? Entonces eres ingenua. <br> Teniendo en cuenta que soy un ludópata, ¿ahora entiendes por qué las recompensas en aquel momento? ¿No? <br> Entonces tenemos un problema: el mío es personal, el tuyo es que mi problema es personal. Ahora esto te importa porque no sabes de qué manera estás involucrado, porque no sabes de todas las cosas que di, cuales podrían ser regalos o "evidencias".', 'De hecho esa pañoleta puede ser la contraseña, una palabra de su frase o el autor, la palabra de aquel parche, cualquier palabra del texto detras del dibujo, incluso tu nombre podria ser una opcion, pero en las preguntas es más complicado y todo es culpa de alguien que me dijo que entraba en conflicto cuando solo eran dos opciones'],
+      strings: ['Esto es a prueba de tontos. No voy a confesar todo lo que he hecho a cualquier persona distraída como tú. Soy un ludópata, al igual que tú, y me gusta ganar. ¿No sabes qué significa "ser" ludópata? Entonces eres ingenua. <br> Teniendo en cuenta que soy un ludópata, ¿ahora entiendes por qué las recompensas en aquel momento? ¿No? <br> Entonces tenemos un problema: el mío es personal, el tuyo es que mi problema es personal. Ahora esto te importa porque no sabes de qué manera estás involucrado, porque no sabes de todas las cosas que di, cuales podrían ser regalos o "evidencias".', 'De hecho esa pañoleta puede ser la contraseña, una palabra de su frase o el autor, el titulo del libro, la palabra de aquel parche, cualquier palabra del texto detras del dibujo, incluso tu nombre podria ser una opcion, pero en las preguntas es más complicado y todo es culpa de alguien que me dijo que entraba en conflicto cuando solo eran dos opciones'],
       typeSpeed: 30,
       cursorChar: ''
    });
@@ -58,7 +58,7 @@ function mostrarRazon() {
       document.getElementById('contentInfo').removeChild(eliminar);
       var content = document.getElementById('contentInfo');
       content.style.display = "none";
-   }, 45000)
+   }, 47000)
 }
 
 //Verificar contraseña
@@ -74,11 +74,10 @@ inputContraseña.addEventListener('keyup', function (event) {
 
 function verificarContraseña(palabra) {
    // Lista de palabras predefinidas
-   var listaPalabras = ['einstein', 'sueños', 'michelle', 'isabela', 'julian', 'Locura es seguir haciendo lo mismo y esperar resultados diferentes', '2/3', 'gina', 'ana', 'gabriela', 'linette', 'laura', 'jules', 'manzana verde', 'cool', 'cardinaux', 'great'];
+   var listaPalabras = ['einstein', 'sueños', 'michelle', 'isabela', 'julian', 'Locura es seguir haciendo lo mismo y esperar resultados diferentes', '2/3', 'gina', 'ana', 'gabriela', 'linette', 'laura', 'jules', 'manzana verde', 'cool', 'cardinaux', 'great', 'Hasta que cumplas tus sueños para cumplir los mios', 'historia', 'literatura', 'cine', 'actuación', 'actuacion', 'teatro', 'fotografia', 'dibujo'];
 
    // Verificar si la palabra está en la lista
    if (listaPalabras.includes(palabra)) {
-      console.log("¡Funciona!");
       window.location.replace('laInvitacion.html');
    } else {
       console.log("La palabra no se encuentra en la lista.");
@@ -130,16 +129,16 @@ const pregunta1 = {
       "¿Cuál clase?",
       "Si"
    ],
-   opcionValue: "value"
+   opcionValue: ['actuación', 'actuacion', 'psicología', 'psicologia', 'teatro', 'fotografía', 'fotografia', 'la fai', 'en el trabajo final', 'trabajo final', 'clase final', 'manzana', 'manzana verde', 'si lo recuerdo', 'laura', 'jaime', 'roberto', 'juan', 'Hasta que cumplas tus sueños para cumplir los mios']
 };
 
 const pregunta2 = {
-   pregunta: "¿Tiene sentido ahora 'las cucarachas'?",
+   pregunta: "¿Tiene sentido ahora la diámica  de 'la cucaracha'?",
    opciones: [
       "¿En la terraza?",
       "No era una cucaracha"
    ],
-   opcionValue: "value"
+   opcionValue: ['chicharra', 'era una chicharra', 'las vendas', 'si tiene sentido', 'si', 'Hasta que cumplas tus sueños para cumplir los mios']
 };
 
 const pregunta3 = {
@@ -148,7 +147,7 @@ const pregunta3 = {
       "¿Eran casquillos?",
       "Por la verdad"
    ],
-   opcionValue: "value"
+   opcionValue: ['metáfora', 'metafora', 'por las verdades', 'por las heridas', 'verdad', ' verdades', 'heridas', 'Hasta que cumplas tus sueños para cumplir los mios']
 };
 
 const pregunta4 = {
@@ -157,25 +156,25 @@ const pregunta4 = {
       "5",
       "6"
    ],
-   opcionValue: "value"
+   opcionValue: ['3', 'rana', 'mujer', 'jules', 'mano', 'sangre', 'michelle', 'sueños', 'Hasta que cumplas tus sueños para cumplir los mios']
 };
 
 const pregunta5 = {
    pregunta: "¿Por qué ese es mi color favorito?",
    opciones: [
-      "Por McLaren",
-      "Ella"
+      "Plla",
+      "Por McLaren"
    ],
-   opcionValue: "value"
+   opcionValue: ['por el fuego', 'fuego', 'Hasta que cumplas tus sueños para cumplir los mios']
 };
 
 const pregunta6 = {
    pregunta: "¿Por qué los elementos eran del mismo color?",
    opciones: [
-      "Obsesión",
-      "Combinación"
+      "Combinación",
+      "Obsesión"
    ],
-   opcionValue: "value"
+   opcionValue: ['representación', 'representacion', 'evidencia', 'gusto', 'Hasta que cumplas tus sueños para cumplir los mios']
 };
 
 // Almacenar los objetos de preguntas en un array
