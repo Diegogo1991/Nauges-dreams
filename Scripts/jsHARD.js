@@ -3,10 +3,20 @@ function musicAleatorie() {
    var indice = Math.floor(Math.random() * 18);
    var audio = document.getElementById('audio');
    audio.src = `./src/MUSICALISTA/${indice}.mp3`;
-   console.log("funciona");
 }
 document.addEventListener("DOMContentLoaded", function () {
    setTimeout(musicAleatorie, 1);
+});
+
+//FUNCION FONDO ALEATORIA
+function fondoAleatorie() {
+   var indice = Math.floor(Math.random() * 5);
+   var video = document.getElementById('video');
+   video.src = `./src/VIDEOSLISTOS/FONDOS/${indice}.mp4`;
+}
+//setTimeout(fondoAleatorie, 1);
+document.addEventListener("DOMContentLoaded", function () {
+   setTimeout(fondoAleatorie, 1);
 });
 
 const enunciado = new Typed('.iniHard', {
