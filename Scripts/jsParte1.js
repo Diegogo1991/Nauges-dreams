@@ -157,7 +157,7 @@ function mostrarHero8() {
    ocultarHeros('Hero7');
 
    ponerEvi();
-   fondoAleatorie();
+   fondoAleatorie("Hero8");
 }
 function mostrarHero9() {
    
