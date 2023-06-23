@@ -1,6 +1,6 @@
 //FUNCION MUSICA ALEATORIA
 function musicAleatorie() {
-   var indice = Math.floor(Math.random() * 19);
+   let indice = Math.floor(Math.random() * 19);
    var audio = document.getElementById('audio');
    audio.src = `./src/MUSICALISTA/${indice}.mp3`;
    console.log("funciona");
@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 //FUNCION FONDO ALEATORIA
 function fondoAleatorie(hero) {
-   var indice = Math.floor(Math.random() * 14);
+   let indice = Math.floor(Math.random() * 14);
    var video = document.querySelector(`#${hero} #video`);
    video.src = `./src/VIDEOSLISTOS/FEVDS/${indice}.mp4`;
 }
@@ -44,8 +44,8 @@ setTimeout(cambiarFondo, 1);
 //PONER EVIDENCIAS
 var maximoEV = 19;
 function ponerEvi() {
-   var fondo = Math.floor(Math.random() * maximoEV);
-   document.getElementById('fondo').style.background = `url('../src/IMGS/EVDS/${fondo}.jpg') center center / cover`;
+   var evidencia = Math.floor(Math.random() * maximoEV);
+   document.getElementById('fondo').style.background = `url('../src/IMGS/EVDS/${evidencia}.jpg') center center / cover`;
 }
 
 let b1h1 = document.getElementById('b1h1');
@@ -115,7 +115,7 @@ function mostrarHero() {
    ocultarHeros('Hero8');
 
    ponerEvi();
-   fondoAleatorie("Hero");
+   fondoAleatorie('Hero');
 }
 
 function mostrarHero2() {
@@ -126,7 +126,7 @@ function mostrarHero2() {
    ocultarHeros('Hero6');//
 
    ponerEvi();
-   fondoAleatorie("Hero2");
+   fondoAleatorie('Hero2');
 }
 
 function mostrarHero3() {
@@ -137,7 +137,7 @@ function mostrarHero3() {
    
 
    ponerEvi();
-   fondoAleatorie("Hero3");
+   fondoAleatorie('Hero3');
 }
 
 function mostrarHero4() {
@@ -191,7 +191,7 @@ function mostrarHero8() {
    
 
    ponerEvi();
-   fondoAleatorie("Hero8");
+   fondoAleatorie('Hero8');
 }
 
 function mostrarHero9() {

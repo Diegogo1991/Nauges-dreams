@@ -67,8 +67,8 @@ function cambiarFondo() {
 //PONER EVIDENCIAS
 var maximoEV = 19;
 function ponerEvi() {
-   var fondo = Math.floor(Math.random() * maximo);
-   document.getElementById('fondo').style.background = `url('../src/IMGS/EVDS/${fondo}.jpg') center center / cover`;
+   var evidencia = Math.floor(Math.random() * maximoEV);
+   document.getElementById('fondo').style.background = `url('../src/IMGS/EVDS/${evidencia}.jpg') center center / cover`;
 }
 
 //ADMIN DIVS
@@ -139,7 +139,7 @@ function mostrarHero6() {
    ocultarHeros('Hero8');
 
    ponerEvi();
-   fondoAleatorie("Hero6");
+   fondoAleatorie('Hero6');
 }
 function mostrarHero7() {
    cambiarColores('Hero7');
@@ -148,7 +148,7 @@ function mostrarHero7() {
    ocultarHeros('Hero6');
 
    ponerEvi();
-   fondoAleatorie("Hero7");
+   fondoAleatorie('Hero7');
 }
 function mostrarHero8() {
    cambiarColores('Hero8');
@@ -157,7 +157,7 @@ function mostrarHero8() {
    ocultarHeros('Hero7');
 
    ponerEvi();
-   fondoAleatorie("Hero8");
+   fondoAleatorie('Hero8');
 }
 function mostrarHero9() {
    
@@ -167,7 +167,7 @@ function mostrarHero9() {
    ocultarHeros('Hero8');
 
    ponerEvi();
-   fondoAleatorie("Hero9");
+   fondoAleatorie('Hero9');
 }
 
 //AVISO SUEÑOS

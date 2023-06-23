@@ -41,8 +41,8 @@ function cambiarFondo() {
 //PONER EVIDENCIAS
 var maximoEV = 19;
 function ponerEvi() {
-   var fondo = Math.floor(Math.random() * maximo);
-   document.getElementById('fondo').style.background = `url('../src/IMGS/EVDS/${fondo}.jpg') center center / cover`;
+   var evidencia = Math.floor(Math.random() * maximoEV);
+   document.getElementById('fondo').style.background = `url('../src/IMGS/EVDS/${evidencia}.jpg') center center / cover`;
 }
 
 let b1h1 = document.getElementById('b1h1');
@@ -112,7 +112,7 @@ function mostrarHero() {
    ocultarHeros('Hero8');  
 
    ponerEvi();
-   fondoAleatorie("Hero");
+   fondoAleatorie('Hero');
 }
 
 function mostrarHero2() {
@@ -133,7 +133,7 @@ function mostrarHero3() {
    ocultarHeros('Hero8');
    
    ponerEvi();
-   fondoAleatorie("Hero3");
+   fondoAleatorie('Hero3');
 }
 
 function mostrarHero4() {
@@ -196,7 +196,7 @@ function mostrarHero9() {
    ocultarHeros('Hero7');
 
    ponerEvi();
-   fondoAleatorie("Hero9");
+   fondoAleatorie('Hero9');
 }
 
 //ADMIN DIVS
