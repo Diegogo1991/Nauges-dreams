@@ -1,3 +1,14 @@
+//FUNCION MUSICA ALEATORIA
+function musicAleatorie() {
+   var indice = Math.floor(Math.random() * 18);
+   var audio = document.getElementById('audio');
+   audio.src = `./src/MUSICALISTA/${indice}.mp3`;
+   console.log("funciona");
+}
+document.addEventListener("DOMContentLoaded", function () {
+   setTimeout(musicAleatorie, 1);
+});
+
 //CAMBIAR COLORES OPCIONES
 var colores = ["rgba(221, 113, 11, 0.55)", "rgba(11, 221, 116, 0.55)", "rgba(11, 67, 221, 0.55)", "rgba(172, 11, 221, 0.55)", "rgba(221, 11, 92, 0.55)", "rgba(221, 11, 11, 0.55)", "rgba(11, 221, 116, 0.55)", "rgba(29, 221, 11, 0.55)", "rgba(221, 218, 11, 0.55)", "rgba(221, 123, 11, 0.55)", "rgba(221, 78, 11, 0.55)", "rgba(9, 204, 243, 0.55)"];
 

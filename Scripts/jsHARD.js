@@ -1,3 +1,14 @@
+//FUNCION MUSICA ALEATORIA
+function musicAleatorie() {
+   var indice = Math.floor(Math.random() * 18);
+   var audio = document.getElementById('audio');
+   audio.src = `./src/MUSICALISTA/${indice}.mp3`;
+   console.log("funciona");
+}
+document.addEventListener("DOMContentLoaded", function () {
+   setTimeout(musicAleatorie, 1);
+});
+
 const enunciado = new Typed('.iniHard', {
    strings: ['Casi siempre tenemos más de dos opciones, solo falta crearlas, creer en ellas o tenerlas, eso dependiendo de quién hayas sido'],
    typeSpeed: 30,

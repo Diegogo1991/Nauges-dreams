@@ -1,3 +1,13 @@
+function musicAleatorie() {
+   var indice = Math.floor(Math.random() * 18);
+   var audio = document.getElementById('audio');
+   audio.src = `./src/MUSICALISTA/${indice}.mp3`;
+}
+document.addEventListener("DOMContentLoaded", function () {
+   setTimeout(musicAleatorie, 1);
+});
+
+
 const typed = new Typed('.typed', {
    strings: ['Un día yo estaba como tú; viendo algo que llamó mi atención en la universidad. Después de eso pasaron cosas tan extrañas que llegué a sentir todo como un sueño surrealista. <br> Cosas que me hicieron dudar de mi forma de actuar. Mi forma de pensar. Cosas que me hicieron hacer otras cosas, de las cuales no sé si soy'],
    typeSpeed: 35,

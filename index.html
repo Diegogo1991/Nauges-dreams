@@ -36,9 +36,9 @@
     <video muted autoplay loop 
         src="00.mp4" type="video/mp4">
     </video>
-    <audio id="audioTag" loop>
-        <source id="audio" src="" type="audio/mpeg">
-    </audio>
+    
+    <audio id="audio" autoplay loop src="" type="audio/mpeg"></audio>
+    
     <div class="capa"></div>
 </div>
 <div id="ultimo"></div>
@@ -53,14 +53,11 @@ function musicAleatorie() {
     var indice = Math.floor(Math.random() * 18);
     var audio = document.getElementById('audio');
     audio.src = `./src/MUSICALISTA/${indice}.mp3`;
-    var audioTag = document.getElementById('audioTag');
-    audioTag.play();
+    console.log("funciona");
 }
-
 document.addEventListener("DOMContentLoaded", function () {
         setTimeout(musicAleatorie, 1);
     });
-
 //setTimeout(musicAleatorie, 1000);
 
 const typed = new Typed('.typed', {
