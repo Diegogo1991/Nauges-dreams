@@ -9,14 +9,12 @@ document.addEventListener("DOMContentLoaded", function () {
    setTimeout(musicAleatorie, 1);
 });
 
-
 //FUNCION FONDO ALEATORIA
-function fondoAleatorie() {
+function fondoAleatorie(hero) {
    var indice = Math.floor(Math.random() * 14);
-   var video = document.getElementById('video');
+   var video = document.querySelector(`#${hero} #video`);
    video.src = `./src/VIDEOSLISTOS/FEVDS/${indice}.mp4`;
 }
-
 
 //ANIMACION ESCRIBIR
 var mostrarEnPregunta = document.querySelector('.pregunta a').textContent;
@@ -63,9 +61,15 @@ function cambiarColores(query) {
 var maximo = 35;
 function cambiarFondo() {
    var fondo = Math.floor(Math.random() * maximo);
-   document.querySelector('body').style.background = `url('./src/IMGS/LISTOS/${fondo}.jpg') center center / cover`;
+   document.querySelector('body').style.background = `url('../src/IMGS/LISTOS/${fondo}.jpg') center center / cover`;
 }
 
+//PONER EVIDENCIAS
+var maximoEV = 19;
+function ponerEvi() {
+   var fondo = Math.floor(Math.random() * maximo);
+   document.querySelector('body').style.background = `url('../src/IMGS/EVDS/${fondo}.jpg') center center / cover`;
+}
 
 //ADMIN DIVS
 function ocultarHeros(hero) {
@@ -84,7 +88,7 @@ function mostrarHero() {
    ocultarHeros('Hero7');
    ocultarHeros('Hero8');
 
-   cambiarFondo();
+   ponerEvi();
 }
 
 function mostrarHero2() {
@@ -134,7 +138,8 @@ function mostrarHero6() {
    ocultarHeros('Hero7');
    ocultarHeros('Hero8');
 
-   cambiarFondo();
+   ponerEvi();
+   fondoAleatorie("Hero6");
 }
 function mostrarHero7() {
    cambiarColores('Hero7');
@@ -142,8 +147,8 @@ function mostrarHero7() {
    document.getElementById('Hero7').style.display = 'flex';
    ocultarHeros('Hero6');
 
-   cambiarFondo();
-   fondoAleatorie();
+   ponerEvi();
+   fondoAleatorie("Hero7");
 }
 function mostrarHero8() {
    cambiarColores('Hero8');
@@ -160,8 +165,8 @@ function mostrarHero9() {
    document.getElementById('Hero9').style.display = 'flex';
    ocultarHeros('Hero8');
 
-   cambiarFondo();
-   fondoAleatorie();
+   ponerEvi();
+   fondoAleatorie("Hero9");
 }
 
 //AVISO SUEÑOS

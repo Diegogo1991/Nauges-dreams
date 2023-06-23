@@ -9,6 +9,13 @@ document.addEventListener("DOMContentLoaded", function () {
    setTimeout(musicAleatorie, 1);
 });
 
+//FUNCION FONDO ALEATORIA
+function fondoAleatorie(hero) {
+   var indice = Math.floor(Math.random() * 14);
+   var video = document.querySelector(`#${hero} #video`);
+   video.src = `../src/VIDEOSLISTOS/FEVDS/${indice}.mp4`;
+}
+
 //CAMBIAR COLORES OPCIONES
 var colores = ["rgba(221, 113, 11, 0.55)", "rgba(11, 221, 116, 0.55)", "rgba(11, 67, 221, 0.55)", "rgba(172, 11, 221, 0.55)", "rgba(221, 11, 92, 0.55)", "rgba(221, 11, 11, 0.55)", "rgba(11, 221, 116, 0.55)", "rgba(29, 221, 11, 0.55)", "rgba(221, 218, 11, 0.55)", "rgba(221, 123, 11, 0.55)", "rgba(221, 78, 11, 0.55)", "rgba(9, 204, 243, 0.55)"];
 
@@ -28,7 +35,14 @@ function cambiarColores(query) {
 function cambiarFondo() {
    let maximo = 22;
    var fondo = Math.floor(Math.random() * maximo);
-   document.getElementById('fondo').style.background = `url('./src/LISTOS/${fondo}.jpg') center center / cover`;
+   document.getElementById('fondo').style.background = `url('./src/IMGS/LISTOS/${fondo}.jpg') center center / cover`;
+}
+
+//PONER EVIDENCIAS
+var maximoEV = 19;
+function ponerEvi() {
+   var fondo = Math.floor(Math.random() * maximo);
+   document.querySelector('body').style.background = `url('../src/IMGS/EVDS/${fondo}.jpg') center center / cover`;
 }
 
 let b1h1 = document.getElementById('b1h1');
@@ -97,7 +111,8 @@ function mostrarHero() {
    ocultarHeros('Hero7');
    ocultarHeros('Hero8');  
 
-   cambiarFondo();
+   ponerEvi();
+   fondoAleatorie("Hero");
 }
 
 function mostrarHero2() {
@@ -117,7 +132,8 @@ function mostrarHero3() {
    ocultarHeros('Hero');  
    ocultarHeros('Hero8');
    
-   cambiarFondo();
+   ponerEvi();
+   fondoAleatorie("Hero3");
 }
 
 function mostrarHero4() {
@@ -179,7 +195,8 @@ function mostrarHero9() {
    ocultarHeros('Hero3');  
    ocultarHeros('Hero7');
 
-   cambiarFondo();
+   ponerEvi();
+   fondoAleatorie("Hero9");
 }
 
 //ADMIN DIVS
