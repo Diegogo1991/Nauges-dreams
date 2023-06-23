@@ -187,6 +187,10 @@ video {
    object-fit: cover;
 }
 
+audio {
+   display: none;
+}
+
 .capa {
    position: absolute;
    top: 0;
