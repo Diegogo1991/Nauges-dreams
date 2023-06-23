@@ -48,7 +48,7 @@ function mostrarRazon() {
    content.appendChild(formacion);
 
    info = new Typed('.informacion', {
-      strings: ['Esto es a prueba de tontos. No voy a confesar todo lo que he hecho a cualquier persona distraída como tú. Soy un ludópata, al igual que tú, y me gusta ganar. ¿No sabes qué significa "ser" ludópata? Entonces eres ingenua. <br> Teniendo en cuenta que soy un ludópata, ¿ahora entiendes por qué las recompensas en aquel momento? ¿No? <br> Entonces tenemos un problema: el mío es personal, el tuyo es que mi problema es personal. Ahora esto te importa porque no sabes de qué manera estás involucrado, porque no sabes de todas las cosas que di, cuales podrían ser regalos o "evidencias".', 'De hecho esa pañoleta puede ser la contraseña, una palabra de su frase o el autor, el titulo del libro, la palabra de aquel parche, cualquier palabra del texto detras del dibujo, incluso tu nombre podria ser una opcion, pero en las preguntas es más complicado y todo es culpa de alguien que me dijo que entraba en conflicto cuando solo eran dos opciones'],
+      strings: ['Esto es a prueba de tontos. No voy a confesar todo lo que he hecho a cualquier persona distraída como tú. Soy un ludópata, al igual que tú, y me gusta ganar. ¿No sabes qué significa "ser" ludópata? Entonces eres ingenua. <br> Teniendo en cuenta que soy un ludópata, ¿ahora entiendes por qué las recompensas en aquel momento? ¿No? <br> Entonces tenemos un problema: el mío es personal, el tuyo es que mi problema es personal. Ahora esto te importa porque no sabes de qué manera estás involucrado, porque no sabes de todas las cosas que di, cuales podrían ser regalos o "evidencias".', 'De hecho esa pañoleta puede ser la contraseña, una palabra de su frase o el autor, el titulo del libro, la palabra de aquel parche, cualquier palabra del texto detras del dibujo, el codigo QR, incluso tu nombre podria ser una opcion, pero en las preguntas es más complicado y todo es culpa de alguien que me dijo que entraba en conflicto cuando solo eran dos opciones'],
       typeSpeed: 30,
       cursorChar: ''
    });
@@ -58,7 +58,7 @@ function mostrarRazon() {
       document.getElementById('contentInfo').removeChild(eliminar);
       var content = document.getElementById('contentInfo');
       content.style.display = "none";
-   }, 47000)
+   }, 49000)
 }
 
 //Verificar contraseña
@@ -74,7 +74,7 @@ inputContraseña.addEventListener('keyup', function (event) {
 
 function verificarContraseña(palabra) {
    // Lista de palabras predefinidas
-   var listaPalabras = ['einstein', 'sueños', 'michelle', 'isabela', 'julian', 'Locura es seguir haciendo lo mismo y esperar resultados diferentes', '2/3', 'gina', 'ana', 'gabriela', 'linette', 'laura', 'jules', 'manzana verde', 'cool', 'cardinaux', 'great', 'Hasta que cumplas tus sueños para cumplir los mios', 'historia', 'literatura', 'cine', 'actuación', 'actuacion', 'teatro', 'fotografia', 'dibujo'];
+   var listaPalabras = ['einstein', 'sueños', 'michelle', 'isabela', 'julian', 'Locura es seguir haciendo lo mismo y esperar resultados diferentes', '2/3', 'gina', 'ana', 'gabriela', 'linette', 'laura', 'jules', 'manzana verde', 'cool', 'cardinaux', 'great', 'Hasta que cumplas tus sueños para cumplir los mios', 'historia', 'literatura', 'cine', 'actuación', 'actuacion', 'teatro', 'fotografia', 'dibujo', '¡`z-m@º91*dx|#'];
 
    // Verificar si la palabra está en la lista
    if (listaPalabras.includes(palabra)) {
