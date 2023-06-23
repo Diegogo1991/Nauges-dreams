@@ -9,6 +9,15 @@ document.addEventListener("DOMContentLoaded", function () {
    setTimeout(musicAleatorie, 1);
 });
 
+
+//FUNCION FONDO ALEATORIA
+function fondoAleatorie() {
+   var indice = Math.floor(Math.random() * 14);
+   var video = document.getElementById('video');
+   video.src = `./src/VIDEOSLISTOS/FEVDS/${indice}.mp4`;
+}
+
+
 //ANIMACION ESCRIBIR
 var mostrarEnPregunta = document.querySelector('.pregunta a').textContent;
 const pregunta = new Typed('.pregunAuto', {
@@ -51,10 +60,10 @@ function cambiarColores(query) {
 }
 
 //CAMBIAR FONDOS ALEATORIOS
-var maximo = 22;
+var maximo = 35;
 function cambiarFondo() {
    var fondo = Math.floor(Math.random() * maximo);
-   document.querySelector('body').style.background = `url('/src/LISTOS/${fondo}.jpg') center center / cover`;
+   document.querySelector('body').style.background = `url('./src/IMGS/LISTOS/${fondo}.jpg') center center / cover`;
 }
 
 
@@ -134,6 +143,7 @@ function mostrarHero7() {
    ocultarHeros('Hero6');
 
    cambiarFondo();
+   fondoAleatorie();
 }
 function mostrarHero8() {
    cambiarColores('Hero8');
@@ -144,12 +154,14 @@ function mostrarHero8() {
    cambiarFondo();
 }
 function mostrarHero9() {
+   
    cambiarColores('Hero9');
 
    document.getElementById('Hero9').style.display = 'flex';
    ocultarHeros('Hero8');
 
    cambiarFondo();
+   fondoAleatorie();
 }
 
 //AVISO SUEÑOS
