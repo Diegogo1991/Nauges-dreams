@@ -42,7 +42,7 @@ function cambiarFondo() {
 var maximoEV = 19;
 function ponerEvi() {
    var fondo = Math.floor(Math.random() * maximo);
-   document.querySelector('body').style.background = `url('../src/IMGS/EVDS/${fondo}.jpg') center center / cover`;
+   document.getElementById('fondo').style.background = `url('../src/IMGS/EVDS/${fondo}.jpg') center center / cover`;
 }
 
 let b1h1 = document.getElementById('b1h1');
