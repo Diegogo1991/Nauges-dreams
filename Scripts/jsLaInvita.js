@@ -183,9 +183,12 @@ function ellaPregunto() {
 
    ella = new Typed('.conocimiento', {
       strings: [contenido],
-      typeSpeed: 35,
+      typeSpeed: 30,
       cursorChar: ''
    })
+   setTimeout(() => {
+      
+   },30000)
 }
 
 
