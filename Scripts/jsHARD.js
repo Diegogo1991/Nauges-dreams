@@ -239,7 +239,7 @@ function preguntaL() {
       opcion1.addEventListener('click', () => {
          window.location.replace('bucle2.html');
       });
-      opcion2 = document.getElementById('opcion1');
+      opcion2 = document.getElementById('opcion2');
       opcion2.addEventListener('click', () => {
          window.location.replace('bucle3.html');
       });
