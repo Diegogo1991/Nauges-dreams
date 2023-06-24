@@ -58,7 +58,7 @@ function mostrarRazon() {
       document.getElementById('contentInfo').removeChild(eliminar);
       var content = document.getElementById('contentInfo');
       content.style.display = "none";
-   }, 49000)
+   }, 53000)
 }
 
 //Verificar contraseña
