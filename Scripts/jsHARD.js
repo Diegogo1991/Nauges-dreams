@@ -4,9 +4,9 @@ function musicAleatorie() {
    var audio = document.getElementById('audio');
    audio.src = `./src/MUSICALISTA/${indice}.mp3`;
 }
-document.addEventListener("DOMContentLoaded", function () {
-   setTimeout(musicAleatorie, 1);
-});
+
+setTimeout(musicAleatorie, 1000);
+
 
 //FUNCION FONDO ALEATORIA
 function fondoAleatorie() {
