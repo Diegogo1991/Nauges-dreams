@@ -183,7 +183,7 @@ function ultimoTexto() {
       strings: ['Después de una semana. Ten paciencia. Nos vemos.'],
       typeSpeed: 35,
       cursorChar: ''
-   })
+   });
 
    setTimeout(() => {
       window.location.replace('index.html');
@@ -204,7 +204,8 @@ function ellaPregunto() {
    })
    setTimeout(() => {
       evidencias = document.getElementById('evidencias');
-      evidencias.addEventListener('click', ultimoTexto)
+      evidencias.addEventListener('click', ultimoTexto);
+      console.log("arrebatao");
    },85000)
 }
 
