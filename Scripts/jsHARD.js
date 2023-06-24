@@ -162,7 +162,7 @@ const pregunta4 = {
 const pregunta5 = {
    pregunta: "¿Por qué ese es mi color favorito?",
    opciones: [
-      "Plla",
+      "Ella",
       "Por McLaren"
    ],
    opcionValue: ['por el fuego', 'fuego', 'Hasta que cumplas tus sueños para cumplir los mios']
