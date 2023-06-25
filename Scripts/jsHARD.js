@@ -74,7 +74,7 @@ inputContraseña.addEventListener('keyup', function (event) {
 
 function verificarContraseña(palabra) {
    // Lista de palabras predefinidas
-   var listaPalabras = ['einstein', 'sueños', 'michelle', 'isabela', 'julian', 'Locura es seguir haciendo lo mismo y esperar resultados diferentes', '2/3', 'gina', 'ana', 'gabriela', 'linette', 'laura', 'jules', 'manzana verde', 'cool', 'cardinaux', 'great', 'Hasta que cumplas tus sueños para cumplir los mios', 'historia', 'literatura', 'cine', 'actuación', 'actuacion', 'teatro', 'fotografia', 'dibujo', '¡`z-m@º91*dx|#', 'seehere'];
+   var listaPalabras = ['einstein', 'albert', 'sueños', 'michelle', 'isabela', 'julian', 'Locura es seguir haciendo lo mismo y esperar resultados diferentes', '2/3', 'gina', 'ana', 'gabriela', 'linette', 'laura', 'jules', 'manzana verde', 'cool', 'cardinaux', 'great', 'Hasta que cumplas tus sueños para cumplir los mios', 'historia', 'literatura', 'cine', 'actuación', 'actuacion', 'teatro', 'fotografia', 'dibujo', '¡`z-m@º91*dx|#', 'seehere'];
 
    // Verificar si la palabra está en la lista
    if (listaPalabras.includes(palabra)) {
@@ -180,7 +180,7 @@ const pregunta6 = {
 // Almacenar los objetos de preguntas en un array
 const arrayPreguntas = [pregunta1, pregunta2, pregunta3, pregunta4, pregunta5, pregunta6];
 
-console.log(arrayPreguntas);
+//console.log(arrayPreguntas);
 
 //FUNCION VERIFICAR VALOR DE CADA PREGUNTA
 /*function verificarContraseña2(indice) {
@@ -256,7 +256,7 @@ function preguntaL() {
          } else {
             console.log("La palabra no se encuentra en la lista.");
          }
-      } );
-   }, 1000)
+      });
+   }, 1000);
 
 }
