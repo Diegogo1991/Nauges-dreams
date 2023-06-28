@@ -12,30 +12,22 @@ import { funcGene } from "./functions.js";
 
 //MOSTRAR IMAGENES
 function mostrarImagenes() {
-   let pensado;
+   let pensado = document.getElementById('pensado');
+   pensado.innerHTML = 'Así fue casi como empezó todo con una de mis victimas, digamos caso "Elise" <img src="./src/IMGS/ELISE/0.png" alt="">';
    setTimeout(() => {
-      const chatss = new Typed('.pensado', {
-         strings: ['Así fue casi como empezó todo con una de mis victimas, digamos caso "Elise" <img src="./src/IMGS/ELISE/0.png" alt="">'],
-         typeSpeed: 10,
-         cursorChar: '',
-         onComplete: setTimeout(() => {
-               pensado = document.getElementById('pensado');
-               let contador = 0;
-               const intervalID = setInterval(() => {
-                  contador++;
-                  pensado.innerHTML = `<img src="./src/IMGS/ELISE/${contador}.png" alt=""></img>`
-                  if (contador == 9) {
-                     clearInterval(intervalID);
-                     setTimeout(() => {
-                        window.location.replace('index.html')
-                     }, 20000)
-                  }
-               }, 7000)
-            }, 6000)
-      });
-   }, 9000)
-   
-}
+      let contador = 0;
+      const intervalID = setInterval(() => {
+         contador++;
+         pensado.innerHTML = `<img src="./src/IMGS/ELISE/${contador}.png" alt=""></img>`
+         if (contador == 9) {
+            clearInterval(intervalID);
+            setTimeout(() => {
+               window.location.replace('index.html')
+            }, 20000);
+         }
+      }, 6000);
+   }, 5000)
+}  
 
 //FOCUS
 function setFocus(selector) {
