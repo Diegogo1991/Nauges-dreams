@@ -86,7 +86,7 @@ html *{
    float: right;
 }
 
-#boton1 {
+.boton1 {
    display: flex;
    justify-content: center;
    align-items: center;
@@ -103,7 +103,7 @@ html *{
    font-size: 1rem;
 }
 
-#boton2 {
+.boton2 {
    display: flex;
    justify-content: center;
    align-items: center;

@@ -1,23 +1,15 @@
-//FUNCION MUSICA ALEATORIA
-function musicAleatorie() {
-   var indice = Math.floor(Math.random() * 19);
-   var audio = document.getElementById('audio');
-   audio.src = `./src/MUSICALISTA/${indice}.mp3`;
-}
+//IMPORTACION FUNCIONES GENERALES
 
-setTimeout(musicAleatorie, 1000);
+import { funcGene } from "./functions.js";
 
+setTimeout(funcGene.musicAleatorie, 1);
 
-//FUNCION FONDO ALEATORIA
-function fondoAleatorie() {
-   var indice = Math.floor(Math.random() * 5);
-   var video = document.getElementById('video');
-   video.src = `./src/VIDEOSLISTOS/FONDOS/${indice}.mp4`;
-}
-//setTimeout(fondoAleatorie, 1);
-document.addEventListener("DOMContentLoaded", function () {
-   setTimeout(fondoAleatorie, 1);
-});
+setTimeout(funcGene.fondoAleatorio, 1);
+
+/*document.addEventListener/*("DOMContentLoaded", function () {
+   setTimeout(funcGene.fondoAleatorie, 1);
+});*/
+
 
 const enunciado = new Typed('.iniHard', {
    strings: ['Casi siempre tenemos más de dos opciones, solo falta crearlas, creer en ellas o tenerlas, eso dependiendo de quién hayas sido'],
@@ -177,8 +169,17 @@ const pregunta6 = {
    opcionValue: ['representación', 'representacion', 'evidencia', 'gusto', 'Hasta que cumplas tus sueños para cumplir los mios']
 };
 
+const pregunta7 = {
+   pregunta: "¿Tú que prefieres?",
+   opciones: [
+      "Vivir siendo un monstruo",
+      "Morir como un buen hombre"
+   ],
+   opcionValue: ['actuación', 'actuacion', 'psicología', 'psicologia', 'teatro', 'fotografía', 'fotografia', 'la fai', 'en el trabajo final', 'trabajo final', 'clase final', 'manzana', 'manzana verde', 'si lo recuerdo', 'laura', 'jaime', 'roberto', 'juan', 'Hasta que cumplas tus sueños para cumplir los mios', 'morir', 'monstruo', 'siendo un monstruo']
+};
+
 // Almacenar los objetos de preguntas en un array
-const arrayPreguntas = [pregunta1, pregunta2, pregunta3, pregunta4, pregunta5, pregunta6];
+const arrayPreguntas = [pregunta1, pregunta2, pregunta3, pregunta4, pregunta5, pregunta6, pregunta7];
 
 //console.log(arrayPreguntas);
 
@@ -205,7 +206,7 @@ function preguntaL() {
    tablero.innerHTML = '<div class="preguntaL preguntaLana">  </div> <div class="preguntaL"> <div class="value opcion"> <input id="contraseña2" type="text"></div> <div class="opcion"> <div id="opcion1" class="opcion1 opcionn"></div><div id="opcion2" class="opcion2 opcionn"></div></div> </div> '
    //var question;
 
-   var indice = Math.floor(Math.random() * 6);
+   var indice = Math.floor(Math.random() * arrayPreguntas.length);
    setTimeout(() => {
       
       
@@ -237,11 +238,11 @@ function preguntaL() {
       }
       opcion1 = document.getElementById('opcion1');
       opcion1.addEventListener('click', () => {
-         window.location.replace('bucle2.html');
+         window.location.replace('bucle3.html');
       });
       opcion2 = document.getElementById('opcion2');
       opcion2.addEventListener('click', () => {
-         window.location.replace('bucle3.html');
+         window.location.replace('laInvitacion.html');
       });
    }, 1);
 
@@ -252,7 +253,7 @@ function preguntaL() {
          var palabra = verificador.value.toLocaleLowerCase();
          if (listaPalabras.includes(palabra)) {
             console.log("¡Funciona!");
-            window.location.replace('laInvitacion.html');
+            window.location.replace('sinPensar.html');
          } else {
             console.log("La palabra no se encuentra en la lista.");
          }
