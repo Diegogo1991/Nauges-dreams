@@ -14,11 +14,10 @@ import { funcGene } from "./functions.js";
 function mostrarImagenes() {
    let pensado;
    setTimeout(() => {
-      new Typed('.pensado', {
+      const chatss = new Typed('.pensado', {
          strings: ['Así fue casi como empezó todo con una de mis victimas, digamos caso "Elise" <img src="./src/IMGS/ELISE/0.png" alt="">'],
-         typeSpeed: 30,
+         typeSpeed: 10,
          cursorChar: '',
-         smartBackspace: false,
          onComplete: setTimeout(() => {
                pensado = document.getElementById('pensado');
                let contador = 0;
@@ -109,13 +108,3 @@ new Typed('.pensado', {
    cursorChar: '',
    onComplete: comentario1
 });*/
-
-
-
-
-
-
-
-
-
-
