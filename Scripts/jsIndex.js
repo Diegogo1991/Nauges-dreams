@@ -65,7 +65,7 @@ function mostrarNovedades() {
 
    setTimeout(() => {
       pistas = new Typed('.hayNovedad', {
-         strings: ['-Tengo unas "pequeñas" confesiones al final. <br> <br> PISTA: Cuando las letras están encerradas es porque quieren decir algo y eso quiere decir algo.'],
+         strings: ['-Tengo unas "pequeñas" confesiones al final. <br> <br> PISTA: Cuando las letras están encerradas es porque quieren decir algo y eso quiere decir algo. <br> Es muy importante. <br> PISTA 2: Hay un adelanto y más letras encerradas, escúchalas.'],
          typeSpeed: 30,
          cursorChar: '',
          loop: false
