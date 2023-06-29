@@ -23,9 +23,9 @@ function mostrarImagenes() {
             clearInterval(intervalID);
             setTimeout(() => {
                window.location.replace('index.html')
-            }, 20000);
+            }, 18000);
          }
-      }, 6000);
+      }, 5000);
    }, 5000)
 }  
 
@@ -46,7 +46,7 @@ function comentario4() {
 }
 function comentario3() {
    new Typed('.comentario3', {
-      strings: ['Y me aprovecho de eso, la falta de unidad, comunicación, empatía, atención y organización que hay en la U. Les encanta el individualismo, la competencia, la indiferencia, los resultados, el chisme, pero no la responsabilidad'],
+      strings: ['Y me aprovecho de eso, la falta de unidad, comunicación, empatía, atención y organización que hay en la U. Les encanta el individualismo, la competencia, la indiferencia, los resultados, pero no la responsabilidad'],
       typeSpeed: 30,
       cursorChar: '',
       onComplete: () => {

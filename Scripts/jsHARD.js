@@ -172,8 +172,8 @@ const pregunta6 = {
 const pregunta7 = {
    pregunta: "¿Tú que prefieres?",
    opciones: [
-      "Vivir siendo un monstruo",
-      "Morir como un buen hombre"
+      "Morir como un buen hombre",
+      "Vivir siendo un monstruo"
    ],
    opcionValue: ['actuación', 'actuacion', 'psicología', 'psicologia', 'teatro', 'fotografía', 'fotografia', 'la fai', 'en el trabajo final', 'trabajo final', 'clase final', 'manzana', 'manzana verde', 'si lo recuerdo', 'laura', 'jaime', 'roberto', 'juan', 'Hasta que cumplas tus sueños para cumplir los mios', 'morir', 'monstruo', 'siendo un monstruo']
 };

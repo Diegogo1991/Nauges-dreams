@@ -230,7 +230,11 @@ audio {
    min-height: 100vh;
    position: relative;
    display: none;
+}
 
+#Hero8 #conCancion {
+   background-color: rgba(170, 5, 5, 0.623);
+   border: .1rem solid rgb(0, 250, 217);
 }
 
 /*Especifico Hero9*/
