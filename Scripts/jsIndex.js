@@ -1,6 +1,6 @@
 /*window.alert('Puedes perder algo si no abres los ojos antes de que sea tarde');*/
 //prompt("Puedes perder algo si no abres los ojos antes de que sea tarde. Ingrese una fecha ?/?/23");
-alert('2');
+alert('1');
 
 //FUNCION MUSICA ALEATORIA
 import { funcGene } from "./functions.js";
