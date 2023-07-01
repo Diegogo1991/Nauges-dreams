@@ -13,38 +13,40 @@ setTimeout(funcGene.fondoAleatorio, 1);
 const typed = new Typed('.typed', {
    strings: ['Un día yo estaba como tú; viendo algo que llamó mi atención en la universidad. Después de eso pasaron cosas tan extrañas que llegué a sentir todo como un sueño surrealista. <br> Cosas que me hicieron dudar de mi forma de actuar. Mi forma de pensar. Cosas que me hicieron hacer otras cosas, de las cuales no sé si soy'],
    typeSpeed: 20,
-   cursorChar: ''
+   cursorChar: '', 
+   onComplete: () => {
+      var botonesPrimeros = document.getElementById('botonesPrimeros');
+      botonesPrimeros.innerHTML = '<button id="culpable" class="boton"></button> <button id = "complice" class="boton" ></button> <button id="elegido" class="boton"></button> <button id="observador" class="boton"></button>';
+
+      setTimeout(() => {
+         var boton = document.querySelectorAll('.botones .boton');
+
+         for (let i = 0; i < boton.length; i++) {
+            boton[i].style.backgroundColor = `rgba(${Math.floor(Math.random() * 255)}, ${Math.floor(Math.random() * 255)}, ${Math.floor(Math.random() * 255)}, 0.5)`
+         }
+      }, 1);
+
+      var boton = document.querySelectorAll('.botones .boton');
+      /*boton.forEach(element => (element).style.display = "flex");*/
+      var opciones = ["Culpable", "Complice", "Elegido", "Observador"];
+      for (let i = 0; i < boton.length; i++) {
+         boton[i].innerHTML = `${opciones[i]}`;
+      }
+
+      var culpable = document.getElementById('culpable');
+      var complice = document.getElementById('complice');
+      var elegido = document.getElementById('elegido');
+      var observador = document.getElementById('observador');
+
+      culpable.addEventListener('click', siguienteParrafo);
+      complice.addEventListener('click', siguienteParrafo);
+      elegido.addEventListener('click', siguienteParrafo);
+      observador.addEventListener('click', siguienteParrafo);
+   }
 });
 
-setTimeout(() => {
-   var botonesPrimeros = document.getElementById('botonesPrimeros');
-   botonesPrimeros.innerHTML = '<button id="culpable" class="boton"></button> <button id = "complice" class="boton" ></button> <button id="elegido" class="boton"></button> <button id="observador" class="boton"></button>';
-
-   setTimeout(() => {
-      var boton = document.querySelectorAll('.botones .boton');
-
-      for (let i = 0; i < boton.length; i++) {
-         boton[i].style.backgroundColor = `rgba(${Math.floor(Math.random() * 255)}, ${Math.floor(Math.random() * 255)}, ${Math.floor(Math.random() * 255)}, 0.5)`
-      }
-   }, 1);
-
-   var boton = document.querySelectorAll('.botones .boton');
-   /*boton.forEach(element => (element).style.display = "flex");*/
-   var opciones = ["Culpable", "Complice", "Elegido", "Observador"];
-   for (let i = 0; i < boton.length; i++) {
-      boton[i].innerHTML = `${opciones[i]}`;
-   }
-
-   var culpable = document.getElementById('culpable');
-   var complice = document.getElementById('complice');
-   var elegido = document.getElementById('elegido');
-   var observador = document.getElementById('observador');
-
-   culpable.addEventListener('click', siguienteParrafo);
-   complice.addEventListener('click', siguienteParrafo);
-   elegido.addEventListener('click', siguienteParrafo);
-   observador.addEventListener('click', siguienteParrafo);
-}, 17000)
+/*setTimeout(() => {
+}, 17000)*/
 
 /*var culpable = document.getElementById('culpable');
 var complice = document.getElementById('complice');
@@ -105,39 +107,48 @@ function siguienteParrafo(e) {
    elemento.classList.add("texto2");
    parrafo.appendChild(elemento);
 
-   setTimeout(() => {
-      var botones = document.createElement("div");
-      botones.setAttribute("class", "botones");
-      parrafo.appendChild(botones);
 
-      /*let ides = ["venganza", "interes", "verdad"];
-      let preguntas = ["¿Por venganza?", "¿Por interés?", "¿Para decirte la verdad?"]*/
-      /*for (let i = 0; i < ides.length; i++) {
-         let boton = document.createElement("button");
-         boton.setAttribute("class", "boton");
-         boton.setAttribute("id", `${ides[i]}`);
-         boton.textContent = `${preguntas[i]}`;
-         
-         botones.appendChild(boton);
-      }*/
-      botones.innerHTML = '<button id="venganza" class="boton">¿Por venganza?</button> <button id = "interes" class="boton" >¿Por interés?</button> <button id="verdad" class="boton">¿Para decirte la verdad?</button>';
+   parrafo2 = new Typed('.texto2', {
+      strings: [contenido],
+      typeSpeed: 20,
+      cursorChar: '',
+      onComplete: () => {
+         var botones = document.createElement("div");
+         botones.setAttribute("class", "botones");
+         parrafo.appendChild(botones);
 
-      venganza = document.getElementById('venganza');
-      interes = document.getElementById('interes');
-      verdad = document.getElementById('verdad');
+         /*let ides = ["venganza", "interes", "verdad"];
+         let preguntas = ["¿Por venganza?", "¿Por interés?", "¿Para decirte la verdad?"]*/
+         /*for (let i = 0; i < ides.length; i++) {
+            let boton = document.createElement("button");
+            boton.setAttribute("class", "boton");
+            boton.setAttribute("id", `${ides[i]}`);
+            boton.textContent = `${preguntas[i]}`;
+            
+            botones.appendChild(boton);
+         }*/
+         botones.innerHTML = '<button id="venganza" class="boton">¿Por venganza?</button> <button id = "interes" class="boton" >¿Por interés?</button> <button id="verdad" class="boton">¿Para decirte la verdad?</button>';
 
-      venganza.addEventListener('click', mostrarParrafo3);
-      interes.addEventListener('click', mostrarParrafo3);
-      verdad.addEventListener('click', mostrarParrafo3);
+         venganza = document.getElementById('venganza');
+         interes = document.getElementById('interes');
+         verdad = document.getElementById('verdad');
 
-      setTimeout(() => {
-         var boton = document.querySelectorAll('#parrafo2 .botones .boton');
+         venganza.addEventListener('click', mostrarParrafo3);
+         interes.addEventListener('click', mostrarParrafo3);
+         verdad.addEventListener('click', mostrarParrafo3);
 
-         for (let i = 0; i < boton.length; i++) {
-            boton[i].style.backgroundColor = `rgba(${Math.floor(Math.random() * 255)}, ${Math.floor(Math.random() * 255)}, ${Math.floor(Math.random() * 255)}, 0.5)`
-         }
-      }, 1)
-   }, 20000)
+         setTimeout(() => {
+            var boton = document.querySelectorAll('#parrafo2 .botones .boton');
+
+            for (let i = 0; i < boton.length; i++) {
+               boton[i].style.backgroundColor = `rgba(${Math.floor(Math.random() * 255)}, ${Math.floor(Math.random() * 255)}, ${Math.floor(Math.random() * 255)}, 0.5)`
+            }
+         }, 1)
+      }
+   })
+   
+   /*setTimeout(() => { 
+   }, 20000)*/
    
    /*var padreBotones = document.getElementById('botonesPrimeros');
    var hijosBotones = document.querySelectorAll('#botonesPrimeros .boton');
@@ -154,13 +165,6 @@ function siguienteParrafo(e) {
    complice.style.display = "none";
    observador.style.display = "none";
    elegido.style.display = "none";*/
-
-   parrafo2 = new Typed('.texto2', {
-      strings: [contenido],
-      typeSpeed: 35,
-      cursorChar: ''
-   })
-
    
 }
 
@@ -262,7 +266,6 @@ function mostrarParrafo3(e) {
    document.getElementById('interes').removeEventListener('click', mostrarParrafo3);
    document.getElementById('verdad').removeEventListener('click', mostrarParrafo3);
 
-   console.log("funciona");
    let palabra;
    switch (e.target.id) {
       case "venganza":
@@ -286,21 +289,24 @@ function mostrarParrafo3(e) {
 
    parrafo.appendChild(pizarra);
 
-   setTimeout(() => {
-      var botones = document.createElement("div");
-      botones.setAttribute("class", "botones");
-      parrafo.appendChild(botones);
-
-      botones.innerHTML = '<button id="sueños" class="boton">¿Por qué soñamos?</button>';
-
-      sueños = document.getElementById('sueños');
-      sueños.addEventListener('click', resetear);
-   }, 5000)
+   /*setTimeout(() => {
+      
+   }, 5000)*/
 
    parrafo3 = new Typed('.texto3', {
       strings: [texto],
       typeSpeed: 20,
-      cursorChar: ''
+      cursorChar: '',
+      onComplete: () => {
+         var botones = document.createElement("div");
+         botones.setAttribute("class", "botones");
+         parrafo.appendChild(botones);
+
+         botones.innerHTML = '<button id="sueños" class="boton">¿Por qué soñamos?</button>';
+
+         sueños = document.getElementById('sueños');
+         sueños.addEventListener('click', resetear);
+      }
    })
 
 }
