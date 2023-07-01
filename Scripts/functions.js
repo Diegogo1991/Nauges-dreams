@@ -62,7 +62,7 @@ function cambiarFondo() {
 
 //PONER EVIDENCIAS
 function ponerEvi() {
-   let maximoEV = 83;
+   let maximoEV = 82;
    var evidencia = Math.floor(Math.random() * maximoEV);
    document.getElementById('fondo').style.background = `url('../src/IMGS/EVDS/${evidencia}.jpg') center center / cover`;
 }
