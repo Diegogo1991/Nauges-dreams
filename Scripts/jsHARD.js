@@ -253,7 +253,7 @@ function preguntaL() {
          var palabra = verificador.value.toLocaleLowerCase();
          if (listaPalabras.includes(palabra)) {
             console.log("¡Funciona!");
-            window.location.replace('sinPensar.html');
+            window.location.replace('coleccion.html');
          } else {
             console.log("La palabra no se encuentra en la lista.");
          }
