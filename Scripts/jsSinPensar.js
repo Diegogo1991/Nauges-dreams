@@ -22,8 +22,13 @@ function mostrarImagenes() {
          if (contador == 9) {
             clearInterval(intervalID);
             setTimeout(() => {
-               window.location.replace('index.html')
-            }, 18000);
+               new Typed('.pensado', {
+                  strings: ['Quise subir todo como imagen, pero la memoria y el tiempo no me alcanzará, los chats estarán en las carpetas de los textos'],
+                  typeSpeed: 30,
+                  cursorChar: '',
+                  onComplete: window.location.replace('coleccion.html')
+               });
+            }, 17000);
          }
       }, 5000);
    }, 5000)

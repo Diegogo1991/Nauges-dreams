@@ -8,6 +8,8 @@ setTimeout(funcGene.musicAleatorie, 1);
 
 import { funcBucles } from "./functions.js";
 
+setTimeout(funcBucles.ponerEvi, 1);
+
 //CAMBIAR COLORES OPCIONES
 function cambiarColores(query) {
    let maximo = 236;
@@ -90,7 +92,7 @@ function mostrarHero() {
    ocultarHeros('Hero8');  
 
    funcBucles.ponerEvi();
-   funcBucles.fondoAleatorie('Hero');
+   //funcBucles.fondoAleatorie('Hero');
 }
 
 function mostrarHero2() {
@@ -99,7 +101,8 @@ function mostrarHero2() {
    document.getElementById('Hero2').style.display = 'flex';
    ocultarHeros('Hero');  
 
-   funcBucles.cambiarFondo();
+   funcBucles.ponerEvi();
+   //funcBucles.cambiarFondo();
 }
 
 function mostrarHero3() {
@@ -111,7 +114,7 @@ function mostrarHero3() {
    ocultarHeros('Hero8');
    
    funcBucles.ponerEvi();
-   funcBucles.fondoAleatorie('Hero3');
+   //funcBucles.fondoAleatorie('Hero3');
 }
 
 function mostrarHero4() {
@@ -121,7 +124,8 @@ function mostrarHero4() {
    ocultarHeros('Hero3');  
    ocultarHeros('Hero9');  
 
-   funcBucles.cambiarFondo();
+   funcBucles.ponerEvi();
+   //funcBucles.cambiarFondo();
 }
 
 function mostrarHero5() {
@@ -143,7 +147,8 @@ function mostrarHero6() {
    document.getElementById('Hero6').style.display = 'flex';
    ocultarHeros('Hero5');  
 
-   funcBucles.cambiarFondo();
+   funcBucles.ponerEvi();
+   //funcBucles.cambiarFondo();
 }
 
 function mostrarHero7() {
@@ -153,7 +158,8 @@ function mostrarHero7() {
    ocultarHeros('Hero2'); 
    ocultarHeros('Hero4'); 
 
-   funcBucles.cambiarFondo();
+   funcBucles.ponerEvi();
+   //funcBucles.cambiarFondo();
 }
 
 function mostrarHero8() {
@@ -163,7 +169,8 @@ function mostrarHero8() {
    ocultarHeros('Hero5'); 
    ocultarHeros('Hero7');
    
-   funcBucles.cambiarFondo();
+   funcBucles.ponerEvi();
+   //funcBucles.cambiarFondo();
 }
 
 function mostrarHero9() {
@@ -174,7 +181,7 @@ function mostrarHero9() {
    ocultarHeros('Hero7');
 
    funcBucles.ponerEvi();
-   funcBucles.fondoAleatorie('Hero9');
+   //funcBucles.fondoAleatorie('Hero9');
 }
 
 

@@ -12,7 +12,7 @@ setTimeout(funcGene.fondoAleatorio, 1);
 
 const typed = new Typed('.typed', {
    strings: ['Un día yo estaba como tú; viendo algo que llamó mi atención en la universidad. Después de eso pasaron cosas tan extrañas que llegué a sentir todo como un sueño surrealista. <br> Cosas que me hicieron dudar de mi forma de actuar. Mi forma de pensar. Cosas que me hicieron hacer otras cosas, de las cuales no sé si soy'],
-   typeSpeed: 35,
+   typeSpeed: 20,
    cursorChar: ''
 });
 
@@ -164,7 +164,7 @@ function siguienteParrafo(e) {
    
 }
 
-function ultimoTexto() {
+/*function ultimoTexto() {
    document.getElementById('content').innerHTML = '<div id="conocimiento" class="conocimiento"></div>'
    new Typed('.conocimiento', {
       strings: ['Después de una semana. Ten paciencia. Nos vemos.'],
@@ -175,14 +175,14 @@ function ultimoTexto() {
    setTimeout(() => {
       window.location.replace('index.html');
    }, 3000)
-}
+}*/
 
 var ella;
 var evidencias;
 function ellaPregunto() {
    document.getElementById('content').innerHTML = '<div id="conocimiento" class="conocimiento"></div>';
 
-   var contenido = 'Ella me preguntó una vez: "¿Qué pasará si el plan no sale como crees? ¿Qué sucederá si todo lo que has hecho no es visto ni recordado por nadie?", mientras se reía. Yo me reí aún más fuerte porque la pregunta es estúpida; pasaría lo mismo que si no lo hiciera, nada. <br> Para empezar, si estás leyendo esto es porque sí ocurrió. Confieso que deseo que esto sea visto y reflexionado por varias personas, aunque me conformaría con solo una, pero no lo hago por o para nadie. Lo he dicho incluso en una de las clases que formaron parte de esto. Lo hago por y para mí. <br> Bueno, eso es lo que quiero hacerte creer. <br> Solo analiza: si pienso que aquí todo se olvida rápidamente y la gente no se da cuenta de lo que sucede y de lo "malo" que hice, ¿por qué seguiría haciéndolo? Aquellos que me conocen saben que cuando me preguntan "¿qué sería lo peor que podría pasar?", respondo: quedar con vida. <br>  No solo quiero que sea visto por varias personas; algo que deseo más que eso es confundirte con esto y que la verdad llegue hasta donde tú decidas. Si confieso algo y nadie escucha, no es asunto mío. Libero la tensión y el único en paz seré yo. Tampoco he considerado arrepentirme. <br> Sin embargo, no lo dejaré todo tan fácil y evidente, ni siquiera podría hacerlo si quisiera. Tengo tantas pruebas con <br> <div class="evidencias" id="evidencias"> <button class="botonev"> fotos,</button> <button id="chats" class="botonev"> chats, </button>  <button class="botonev"> videos, </button>  <button class="botonev"> audios, </button> <button class="botonev"> textos, </button> </div> que a veces no sé ni cómo hacer todo. Solo confío, o confía, en que después de una semana por cada noche se irá revelando un “sueño”, uno más aparte de los tantos camuflados en las imágenes aleatorias de cada pregunta. Y me da igual si ves esto solo una vez. De hecho, lo mejor para ti sería así, porque recuerda la primera advertencia. ¿¡Seré idiota!? ¿Por qué creo que recordarás la primera advertencia si ni siquiera recuerdas lo que ocurrió en las fechas que aparecen? ¿Comprendes a qué me refiero? Sé que no lo haces. Nuestra sombra, aquella que me interrogó, tampoco lo hace.'
+   var contenido = 'Ella me preguntó una vez: "¿Qué pasará si el plan no sale como crees? ¿Qué sucederá si todo lo que has hecho no es visto ni recordado por nadie?", mientras se reía. Yo me reí aún más fuerte porque la pregunta es estúpida; pasaría lo mismo que si no lo hiciera, nada. <br> Para empezar, si estás leyendo esto es porque sí ocurrió. Confieso que deseo que esto sea visto y reflexionado por varias personas, aunque me conformaría con solo una, pero no lo hago por o para nadie. Lo he dicho incluso en una de las clases que formaron parte de esto. Lo hago por y para mí. <br> Bueno, eso es lo que quiero hacerte creer. <br> Solo analiza: si pienso que aquí todo se olvida rápidamente y la gente no se da cuenta de lo que sucede y de lo "malo" que hice, ¿por qué seguiría haciéndolo? Aquellos que me conocen saben que cuando me preguntan "¿qué sería lo peor que podría pasar?", respondo: quedar con vida. <br>  No solo quiero que sea visto por varias personas; algo que deseo más que eso es confundirte con esto y que la verdad llegue hasta donde tú decidas. Si confieso algo y nadie escucha, no es asunto mío. Libero la tensión y el único en paz seré yo. Tampoco he considerado arrepentirme. <br> Sin embargo, no lo dejaré todo tan fácil y evidente, ni siquiera podría hacerlo si quisiera. Tengo tantas pruebas con <br> <div class="evidencias" id="evidencias"> <button id="fotos" class="botonev"> fotos,</button> <button id="chats" class="botonev"> chats, </button>  <button id="videos" class="botonev"> videos, </button>  <button id="audios" class="botonev"> audios, </button> <button id="textos" class="botonev"> textos, </button> </div> que a veces no sé ni cómo hacer todo. Solo confío, o confía, en que después de una semana por cada noche se irá revelando un “sueño”, uno más aparte de los tantos camuflados en las imágenes aleatorias de cada pregunta. Y me da igual si ves esto solo una vez. De hecho, lo mejor para ti sería así, porque recuerda la primera advertencia. ¿¡Seré idiota!? ¿Por qué creo que recordarás la primera advertencia si ni siquiera recuerdas lo que ocurrió en las fechas que aparecen? ¿Comprendes a qué me refiero? Sé que no lo haces. Nuestra sombra, aquella que me interrogó, tampoco lo hace.'
 
    /*ella = new Typed('.conocimiento', {
       strings: [contenido],
@@ -192,18 +192,44 @@ function ellaPregunto() {
    
    ella = new Typed('.conocimiento', {
       strings: [contenido],
-      typeSpeed: 30,
+      typeSpeed: 20,
       cursorChar: '',
       onComplete: function () {
+
          let chats = document.getElementById('chats');
          chats.style.backgroundColor = "rgba(4, 250, 250, 0.541)";
          chats.addEventListener('click', () => {
             window.location.replace('sinPensar.html');
          })
-         var evidencias = document.getElementById('evidencias');
+
+         let textos = document.getElementById('textos');
+         textos.style.backgroundColor = "rgba(4, 250, 250, 0.541)";
+         textos.addEventListener('click', () => {
+            window.location.replace('../coleccion.html');
+         })
+
+         let audios = document.getElementById('audios');
+         audios.style.backgroundColor = "rgba(4, 250, 250, 0.541)";
+         audios.addEventListener('click', () => {
+            window.location.replace('../audios.html');
+         })
+
+         let fotos = document.getElementById('fotos');
+         fotos.style.backgroundColor = "rgba(4, 250, 250, 0.541)";
+         fotos.addEventListener('click', () => {
+            window.location.replace('../Bucle1.html');
+         })
+
+         let videos = document.getElementById('videos');
+         videos.style.backgroundColor = "rgba(4, 250, 250, 0.541)";
+         videos.addEventListener('click', () => {
+            window.location.replace('../psique.html');
+         })
+         
+         /*var evidencias = document.getElementById('evidencias');
          if (evidencias) {
             evidencias.addEventListener('click', ultimoTexto);
-         }
+         }*/
       }
    });
 }
@@ -221,7 +247,7 @@ function resetear() {
 
    porqueSoñar = new Typed('.conocimiento', {
       strings: [contenido],
-      typeSpeed: 35,
+      typeSpeed: 20,
       cursorChar: '',
       onComplete: () => {
          var evidencias = document.getElementById('ellaUnaVez');
@@ -273,7 +299,7 @@ function mostrarParrafo3(e) {
 
    parrafo3 = new Typed('.texto3', {
       strings: [texto],
-      typeSpeed: 35,
+      typeSpeed: 20,
       cursorChar: ''
    })
 

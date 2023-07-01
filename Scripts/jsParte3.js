@@ -8,6 +8,8 @@ setTimeout(funcGene.musicAleatorie, 1);
 
 import { funcBucles } from "./functions.js";
 
+setTimeout(funcBucles.ponerEvi, 1);
+
 //CAMBIAR COLORES OPCIONES
 function cambiarColores(query) {
    let maximo = 236;
@@ -90,7 +92,7 @@ function mostrarHero() {
    ocultarHeros('Hero8');
 
    funcBucles.ponerEvi();
-   funcBucles.fondoAleatorie('Hero');
+   //funcBucles.fondoAleatorie('Hero');
 }
 
 function mostrarHero2() {
@@ -101,7 +103,7 @@ function mostrarHero2() {
    ocultarHeros('Hero6');//
 
    funcBucles.ponerEvi();
-   funcBucles.fondoAleatorie('Hero2');
+   //funcBucles.fondoAleatorie('Hero2');
 }
 
 function mostrarHero3() {
@@ -111,7 +113,7 @@ function mostrarHero3() {
    ocultarHeros('Hero');//
    
    funcBucles.ponerEvi();
-   funcBucles.fondoAleatorie('Hero3');
+   //funcBucles.fondoAleatorie('Hero3');
 }
 
 function mostrarHero4() {
@@ -120,7 +122,8 @@ function mostrarHero4() {
    document.getElementById('Hero4').style.display = 'flex';
    ocultarHeros('Hero3'); //
    
-   funcBucles.cambiarFondo();
+   funcBucles.ponerEvi();
+   //funcBucles.cambiarFondo();
 }
 
 function mostrarHero5() {
@@ -129,7 +132,8 @@ function mostrarHero5() {
    document.getElementById('Hero5').style.display = 'flex';
    ocultarHeros('Hero3'); //
    
-   funcBucles.cambiarFondo();
+   funcBucles.ponerEvi();
+   //funcBucles.cambiarFondo();
 }
 
 function mostrarHero6() {
@@ -143,7 +147,8 @@ function mostrarHero6() {
    ocultarHeros('Hero7');//
    ocultarHeros('Hero8');//
 
-   funcBucles.cambiarFondo();
+   funcBucles.ponerEvi();
+   //funcBucles.cambiarFondo();
 }
 
 function mostrarHero7() {
@@ -153,7 +158,8 @@ function mostrarHero7() {
    ocultarHeros('Hero5');//
    ocultarHeros('Hero6');//
    
-   funcBucles.cambiarFondo();
+   funcBucles.ponerEvi();
+   //funcBucles.cambiarFondo();
 }
 
 function mostrarHero8() {
@@ -163,7 +169,7 @@ function mostrarHero8() {
    ocultarHeros('Hero2');
    
    funcBucles.ponerEvi();
-   funcBucles.fondoAleatorie('Hero8');
+   //funcBucles.fondoAleatorie('Hero8');
 }
 
 function mostrarHero9() {
@@ -173,10 +179,11 @@ function mostrarHero9() {
    ocultarHeros('Hero8');//
    ocultarHeros('Hero7'); //
    
-   let suiche = Math.floor(Math.random() * 2);
+   /*let suiche = Math.floor(Math.random() * 2);
    if (suiche == 0) {
       funcBucles.ponerEvi();
    } else {
       funcBucles.cambiarFondo();
-   }
+   }*/
+   funcBucles.ponerEvi();
 }

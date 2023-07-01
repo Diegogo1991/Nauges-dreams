@@ -1,6 +1,6 @@
 /*window.alert('Puedes perder algo si no abres los ojos antes de que sea tarde');*/
 //prompt("Puedes perder algo si no abres los ojos antes de que sea tarde. Ingrese una fecha ?/?/23");
-alert('10:00 p.m.');
+/*alert('10:00 p.m.');*/
 
 //FUNCION MUSICA ALEATORIA
 import { funcGene } from "./functions.js";
@@ -19,7 +19,7 @@ const typed = new Typed('.typed', {
 });
 
 const HayNove = new Typed('.aviso', {
-   strings: ['¡Hay novedades!'],
+   strings: ['¡No hay novedades!'],
    typeSpeed: 102,
    cursorChar: '',
    loop: true
@@ -65,19 +65,22 @@ function mostrarNovedades() {
 
    setTimeout(() => {
       pistas = new Typed('.hayNovedad', {
-         strings: ['-Tengo unas "pequeñas" confesiones al final. <br> <br> PISTA: Cuando las letras están encerradas es porque quieren decir algo y eso quiere decir algo. <br> PISTA 2: Hay un adelanto y más letras encerradas, escúchalas.'],
+         strings: ['-Tengo unas "pequeñas" confesiones al final. <br> <br> PISTA: Cuando las letras están encerradas es porque quieren decir algo y eso quiere decir algo. <br> PISTA 2: No te distraigas con las imagenes, están precisamente para eso.'],
          typeSpeed: 30,
          cursorChar: '',
-         loop: false
+         loop: false,
+         onComplete: () => {
+            setTimeout(() => {
+               var contend = document.getElementById('ocultarnovedades');
+               var novedades = document.getElementById('novedades');
+               contend.removeChild(novedades);
+               avisoNov.addEventListener('click', mostrarNovedades);
+            }, 4000)
+         }
       })
    }, 1000)
 
-   setTimeout(() => {
-      var contend = document.getElementById('ocultarnovedades');
-      var novedades = document.getElementById('novedades');
-      contend.removeChild(novedades);
-      avisoNov.addEventListener('click', mostrarNovedades);
-   }, 14000)
+   
 }
 
 /*function ocultarNovedades() {

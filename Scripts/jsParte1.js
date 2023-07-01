@@ -8,6 +8,8 @@ setTimeout(funcGene.musicAleatorie, 1);
 
 import { funcBucles } from "./functions.js";
 
+setTimeout(funcBucles.ponerEvi, 1);
+
 //ANIMACION ESCRIBIR
 /*var mostrarEnPregunta = document.querySelector('.pregunta a').textContent;
 const pregunta = new Typed('.pregunAuto', {
@@ -116,7 +118,7 @@ function mostrarHero() {
    ocultarHeros('Hero8');
 
    funcBucles.ponerEvi();
-   funcGene.fondoAleatorio();
+   //funcGene.fondoAleatorio();
 }
 
 function mostrarHero2() {
@@ -126,8 +128,10 @@ function mostrarHero2() {
    ocultarHeros('Hero');
    ocultarHeros('Hero3');
    ocultarHeros('Hero4');
+   ocultarHeros('Hero5');
 
-   funcBucles.cambiarFondo();
+   funcBucles.ponerEvi();
+   //funcBucles.cambiarFondo();
 }
 
 function mostrarHero3() {
@@ -137,7 +141,8 @@ function mostrarHero3() {
    ocultarHeros('Hero2');
    ocultarHeros('Hero');
 
-   funcBucles.cambiarFondo();
+   funcBucles.ponerEvi();
+   //funcBucles.cambiarFondo();
 }
 
 function mostrarHero4() {
@@ -146,7 +151,8 @@ function mostrarHero4() {
    document.getElementById('Hero4').style.display = 'flex';
    ocultarHeros('Hero3');
 
-   funcBucles.cambiarFondo();
+   funcBucles.ponerEvi();
+   //funcBucles.cambiarFondo();
 }
 function mostrarHero5() {
    cambiarColores('Hero5');
@@ -155,7 +161,8 @@ function mostrarHero5() {
    ocultarHeros('Hero4');
    ocultarHeros('Hero6');
 
-   funcBucles.cambiarFondo();
+   funcBucles.ponerEvi();
+   //funcBucles.cambiarFondo();
 }
 function mostrarHero6() {
    cambiarColores('Hero6');
@@ -167,7 +174,7 @@ function mostrarHero6() {
    ocultarHeros('Hero8');
 
    funcBucles.ponerEvi();
-   funcBucles.fondoAleatorie('Hero6');
+   //funcBucles.fondoAleatorie('Hero6');
 }
 function mostrarHero7() {
    cambiarColores('Hero7');
@@ -176,7 +183,7 @@ function mostrarHero7() {
    ocultarHeros('Hero6');
 
    funcBucles.ponerEvi();
-   funcBucles.fondoAleatorie('Hero7');
+   //funcBucles.fondoAleatorie('Hero7');
 }
 function mostrarHero8() {
    cambiarColores('Hero8');
@@ -185,7 +192,7 @@ function mostrarHero8() {
    ocultarHeros('Hero7');
 
    funcBucles.ponerEvi();
-   funcBucles.fondoAleatorie('Hero8');
+   //funcBucles.fondoAleatorie('Hero8');
 }
 function mostrarHero9() {
    
@@ -195,7 +202,7 @@ function mostrarHero9() {
    ocultarHeros('Hero8');
 
    funcBucles.ponerEvi();
-   funcBucles.fondoAleatorie('Hero9');
+   //funcBucles.fondoAleatorie('Hero9');
 }
 
 //AVISO SUEÑOS
