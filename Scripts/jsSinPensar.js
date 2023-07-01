@@ -26,7 +26,9 @@ function mostrarImagenes() {
                   strings: ['Quise subir todo como imagen, pero la memoria y el tiempo no me alcanzará, los chats estarán en las carpetas de los textos'],
                   typeSpeed: 30,
                   cursorChar: '',
-                  onComplete: window.location.replace('coleccion.html')
+                  onComplete: setTimeout(() => {
+                     window.location.replace('coleccion.html');
+                  }, 3000) 
                });
             }, 17000);
          }
