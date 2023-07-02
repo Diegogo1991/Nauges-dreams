@@ -120,9 +120,42 @@ header {
    width: 100vw;
    min-height: 100vh;
    height: auto;
+   line-height: 1.1rem;
    padding: 1rem;
-   padding-bottom: 3rem;
+   padding-bottom: 3.5rem;
    color: aliceblue;
    z-index: 20;
    background-color: rgb(0, 0, 0);
+}
+
+#back {
+   display: block;
+   width: 40vw;
+   height: auto;
+   padding: .5rem 1rem;
+   border-radius: 1rem;
+   background-color: rgba(255, 140, 0, 0.603);
+   position: fixed;
+   bottom: .6rem;
+   z-index: 25;
+   text-align: center;
+   color: white;
+   text-shadow: 1px 1px 2px rgb(0, 0, 0), 0 0 1em rgba(0, 0, 0, 0.6), 0 0 0.2em rgba(0, 0, 0, 0.5);
+   font-family: 'Righteous';
+}
+
+#atras {
+   display: block;
+   width: 40vw;
+   height: auto;
+   padding: .5rem 1rem;
+   border-radius: 1rem;
+   background-color: rgba(255, 140, 0, 0.603);
+   position: fixed;
+   bottom: .6rem;
+   z-index: 25;
+   text-align: center;
+   color: white;
+   text-shadow: 1px 1px 2px rgb(0, 0, 0), 0 0 1em rgba(0, 0, 0, 0.6), 0 0 0.2em rgba(0, 0, 0, 0.5);
+   font-family: 'Righteous';
 }

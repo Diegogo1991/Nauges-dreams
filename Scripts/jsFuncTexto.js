@@ -1,4 +1,6 @@
 export function imprimirTexto(texto) {
+   let atras = document.getElementById('atras');
+   atras.style.display = "none";
    let divTablero = document.createElement('div');
    divTablero.className = 'tablero';
 
@@ -8,7 +10,20 @@ export function imprimirTexto(texto) {
    new Typed('.tablero', {
       strings: [texto],
       typeSpeed: 10,
-      cursorChar: ''
+      showCursor: true,
+      cursorChar: '|',
+      onComplete: () => {
+         let back = document.createElement('div');
+         back.id = 'back';
+         back.innerHTML = "BACK";
+
+         body.appendChild(back);
+         back.addEventListener('click', () => {
+            divTablero.remove();
+            back.remove();
+            atras.style.display = "block";
+         })
+      }
    });
 }
 

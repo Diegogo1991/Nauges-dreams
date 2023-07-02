@@ -14,9 +14,9 @@
    redireccionarPagina('Jetta')
 });*/
 
-/*document.getElementById('supra').addEventListener('click', () => {
+document.getElementById('supra').addEventListener('click', () => {
    redireccionarPagina('Supra')
-});*/
+});
 
 /*document.getElementById('dreams').addEventListener('click', () => {
    redireccionarPagina('Dreams')
