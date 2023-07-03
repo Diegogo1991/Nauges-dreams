@@ -14,6 +14,12 @@ document.getElementById('2').addEventListener('click', () => {
    imprimirTexto(textos.carta2);
 });
 
+//CARTA 3
+document.getElementById('3').addEventListener('click', () => {
+   imprimirTexto(textos.carta3);
+});
+
+
 
 //FUNCION PARA RETROCEDER
 document.getElementById('atras').addEventListener('click', () => {
