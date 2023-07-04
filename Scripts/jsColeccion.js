@@ -10,9 +10,9 @@
    redireccionarPagina('Elise')
 });*/
 
-/*document.getElementById('jetta').addEventListener('click', () => {
+document.getElementById('jetta').addEventListener('click', () => {
    redireccionarPagina('Jetta')
-});*/
+});
 
 document.getElementById('supra').addEventListener('click', () => {
    redireccionarPagina('Supra')
