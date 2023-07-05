@@ -6,9 +6,9 @@
    redireccionarPagina('Dakota')
 });*/
 
-/*document.getElementById('elise').addEventListener('click', () => {
+document.getElementById('elise').addEventListener('click', () => {
    redireccionarPagina('Elise')
-});*/
+});
 
 document.getElementById('jetta').addEventListener('click', () => {
    redireccionarPagina('Jetta')
