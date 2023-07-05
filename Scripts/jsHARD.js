@@ -10,7 +10,7 @@ setTimeout(funcGene.fondoAleatorio, 1);
    setTimeout(funcGene.fondoAleatorie, 1);
 });*/
 
-
+//Mostrar texto
 const enunciado = new Typed('.iniHard', {
    strings: ['Casi siempre tenemos más de dos opciones, solo falta crearlas, creer en ellas o tenerlas, eso dependiendo de quién hayas sido'],
    typeSpeed: 30,
@@ -29,6 +29,10 @@ var contraseña = document.getElementById('contraseña');
 var validador = document.getElementById('enviarCtr');
 validador.addEventListener('click', mostrarRazon);
 
+//REDIRECCIONAMIENTO A COLECCION
+document.getElementById('preguntas').addEventListener('click', () => {
+   window.location.replace('./coleccion.html');
+})
 
 var info;
 function mostrarRazon() {
@@ -242,7 +246,7 @@ function preguntaL() {
       });
       opcion2 = document.getElementById('opcion2');
       opcion2.addEventListener('click', () => {
-         window.location.replace('laInvitacion.html');
+         window.location.replace('psique.html');
       });
    }, 1);
 

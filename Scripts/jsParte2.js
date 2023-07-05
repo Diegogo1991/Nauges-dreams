@@ -9,6 +9,7 @@ setTimeout(funcGene.musicAleatorie, 1);
 import { funcBucles } from "./functions.js";
 
 setTimeout(funcBucles.ponerEvi, 1);
+setTimeout(funcBucles.fondoAleatorie, 1);
 
 //CAMBIAR COLORES OPCIONES
 function cambiarColores(query) {
@@ -92,7 +93,7 @@ function mostrarHero() {
    ocultarHeros('Hero8');  
 
    funcBucles.ponerEvi();
-   //funcBucles.fondoAleatorie('Hero');
+   funcBucles.fondoAleatorie();
 }
 
 function mostrarHero2() {
@@ -102,7 +103,7 @@ function mostrarHero2() {
    ocultarHeros('Hero');  
 
    funcBucles.ponerEvi();
-   //funcBucles.cambiarFondo();
+   funcBucles.fondoAleatorie();
 }
 
 function mostrarHero3() {
@@ -114,7 +115,7 @@ function mostrarHero3() {
    ocultarHeros('Hero8');
    
    funcBucles.ponerEvi();
-   //funcBucles.fondoAleatorie('Hero3');
+   funcBucles.fondoAleatorie();
 }
 
 function mostrarHero4() {
@@ -125,7 +126,7 @@ function mostrarHero4() {
    ocultarHeros('Hero9');  
 
    funcBucles.ponerEvi();
-   //funcBucles.cambiarFondo();
+   funcBucles.fondoAleatorie();
 }
 
 function mostrarHero5() {
@@ -148,7 +149,7 @@ function mostrarHero6() {
    ocultarHeros('Hero5');  
 
    funcBucles.ponerEvi();
-   //funcBucles.cambiarFondo();
+   funcBucles.fondoAleatorie();
 }
 
 function mostrarHero7() {
@@ -159,7 +160,7 @@ function mostrarHero7() {
    ocultarHeros('Hero4'); 
 
    funcBucles.ponerEvi();
-   //funcBucles.cambiarFondo();
+   funcBucles.fondoAleatorie();
 }
 
 function mostrarHero8() {
@@ -170,7 +171,7 @@ function mostrarHero8() {
    ocultarHeros('Hero7');
    
    funcBucles.ponerEvi();
-   //funcBucles.cambiarFondo();
+   funcBucles.fondoAleatorie();
 }
 
 function mostrarHero9() {
@@ -181,7 +182,7 @@ function mostrarHero9() {
    ocultarHeros('Hero7');
 
    funcBucles.ponerEvi();
-   //funcBucles.fondoAleatorie('Hero9');
+   funcBucles.fondoAleatorie();
 }
 
 

@@ -65,7 +65,7 @@ function mostrarNovedades() {
 
    setTimeout(() => {
       pistas = new Typed('.hayNovedad', {
-         strings: ['-Tengo unas "pequeñas" confesiones al final. <br> <br> PISTA: Cuando las letras están encerradas es porque quieren decir algo y eso quiere decir algo. <br> PISTA 2: No te distraigas con las imagenes, están precisamente para eso.'],
+         strings: [' · Tengo unas "pequeñas" confesiones al final. <br> <br> · Hay respuestas en las preguntas <br> · No te distraigas con las imagenes, están precisamente para eso.'],
          typeSpeed: 30,
          cursorChar: '',
          loop: false,

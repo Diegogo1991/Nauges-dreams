@@ -9,6 +9,7 @@ setTimeout(funcGene.musicAleatorie, 1);
 import { funcBucles } from "./functions.js";
 
 setTimeout(funcBucles.ponerEvi, 1);
+setTimeout(funcBucles.fondoAleatorie, 1);
 
 //CAMBIAR COLORES OPCIONES
 function cambiarColores(query) {
@@ -92,74 +93,74 @@ function mostrarHero() {
    ocultarHeros('Hero8');
 
    funcBucles.ponerEvi();
-   //funcBucles.fondoAleatorie('Hero');
+   funcBucles.fondoAleatorie();
 }
 
 function mostrarHero2() {
    cambiarColores('Hero2');
 
    document.getElementById('Hero2').style.display = 'flex';
-   ocultarHeros('Hero');//
-   ocultarHeros('Hero6');//
+   ocultarHeros('Hero');
+   ocultarHeros('Hero6');
 
    funcBucles.ponerEvi();
-   //funcBucles.fondoAleatorie('Hero2');
+   funcBucles.fondoAleatorie();
 }
 
 function mostrarHero3() {
    cambiarColores('Hero3');
 
    document.getElementById('Hero3').style.display = 'flex';
-   ocultarHeros('Hero');//
+   ocultarHeros('Hero');
    
    funcBucles.ponerEvi();
-   //funcBucles.fondoAleatorie('Hero3');
+   funcBucles.fondoAleatorie();
 }
 
 function mostrarHero4() {
    cambiarColores('Hero4');
 
    document.getElementById('Hero4').style.display = 'flex';
-   ocultarHeros('Hero3'); //
+   ocultarHeros('Hero3'); 
    
    funcBucles.ponerEvi();
-   //funcBucles.cambiarFondo();
+   funcBucles.fondoAleatorie();
 }
 
 function mostrarHero5() {
    cambiarColores('Hero5');
 
    document.getElementById('Hero5').style.display = 'flex';
-   ocultarHeros('Hero3'); //
+   ocultarHeros('Hero3'); 
    
    funcBucles.ponerEvi();
-   //funcBucles.cambiarFondo();
+   funcBucles.fondoAleatorie();
 }
 
 function mostrarHero6() {
    cambiarColores('Hero6');
 
    document.getElementById('Hero6').style.display = 'flex';
-   ocultarHeros('Hero2');//
-   //ocultarHeros('Hero3');//
-   ocultarHeros('Hero4');//
-   ocultarHeros('Hero5');//
-   ocultarHeros('Hero7');//
-   ocultarHeros('Hero8');//
+   ocultarHeros('Hero2');
+   //ocultarHeros('Hero3');
+   ocultarHeros('Hero4');
+   ocultarHeros('Hero5');
+   ocultarHeros('Hero7');
+   ocultarHeros('Hero8');
 
    funcBucles.ponerEvi();
-   //funcBucles.cambiarFondo();
+   funcBucles.fondoAleatorie();
 }
 
 function mostrarHero7() {
    cambiarColores('Hero7');
 
    document.getElementById('Hero7').style.display = 'flex';
-   ocultarHeros('Hero5');//
-   ocultarHeros('Hero6');//
+   ocultarHeros('Hero5');
+   ocultarHeros('Hero6');
    
    funcBucles.ponerEvi();
-   //funcBucles.cambiarFondo();
+   funcBucles.fondoAleatorie();
 }
 
 function mostrarHero8() {
@@ -169,21 +170,16 @@ function mostrarHero8() {
    ocultarHeros('Hero2');
    
    funcBucles.ponerEvi();
-   //funcBucles.fondoAleatorie('Hero8');
+   funcBucles.fondoAleatorie();
 }
 
 function mostrarHero9() {
    cambiarColores('Hero9');
 
    document.getElementById('Hero9').style.display = 'flex';
-   ocultarHeros('Hero8');//
-   ocultarHeros('Hero7'); //
+   ocultarHeros('Hero8');
+   ocultarHeros('Hero7'); 
    
-   /*let suiche = Math.floor(Math.random() * 2);
-   if (suiche == 0) {
-      funcBucles.ponerEvi();
-   } else {
-      funcBucles.cambiarFondo();
-   }*/
    funcBucles.ponerEvi();
+   funcBucles.fondoAleatorie();
 }

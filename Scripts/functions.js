@@ -39,9 +39,9 @@ export const funcBucles = {
 }
 
 //FUNCION FONDO ALEATORIE (BUCLES)
-function fondoAleatorie(hero) {
+function fondoAleatorie() {
    var indice = Math.floor(Math.random() * 13);
-   var video = document.querySelector(`#${hero} #video`);
+   var video = document.getElementById('video');
    video.src = `./src/VIDEOSLISTOS/FEVDS/${indice}.mp4`;
 }
 
@@ -62,7 +62,7 @@ function cambiarFondo() {
 
 //PONER EVIDENCIAS
 function ponerEvi() {
-   let maximoEV = 81;
+   let maximoEV = 76;
    var evidencia = Math.floor(Math.random() * maximoEV);
    document.getElementById('fondo').style.background = `url('../src/IMGS/EVDS/${evidencia}.jpg') center center / cover`;
 }

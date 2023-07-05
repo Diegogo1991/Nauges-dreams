@@ -215,8 +215,8 @@ audio{
 }
 
 #preguntas{
-   text-decoration: line-through;
-   background: rgb(255, 123, 0, 0.6);
+   text-decoration: none;
+   background: rgba(0, 238, 255, 0.6);
 }
 
 .preguntaL{
