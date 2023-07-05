@@ -246,7 +246,7 @@ function preguntaL() {
       });
       opcion2 = document.getElementById('opcion2');
       opcion2.addEventListener('click', () => {
-         window.location.replace('psique.html');
+         window.location.replace('sinPensar.html');
       });
    }, 1);
 
