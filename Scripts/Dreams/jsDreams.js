@@ -5,9 +5,9 @@ import { imprimirTexto } from "../jsFuncTexto.js";
 import { textos } from "./textosDreams.js";
 
 //CARTA 1
-/*document.getElementById('1').addEventListener('click', () => {
+document.getElementById('1').addEventListener('click', () => {
    imprimirTexto(textos.carta1);
-});*/
+});
 
 //CARTA 2
 /*document.getElementById('2').addEventListener('click', () => {
