@@ -18,10 +18,10 @@ document.getElementById('supra').addEventListener('click', () => {
    redireccionarPagina('Supra')
 });
 
-/*document.getElementById('dreams').addEventListener('click', () => {
+document.getElementById('dreams').addEventListener('click', () => {
    redireccionarPagina('Dreams')
 });
-*/
+
 
 function redireccionarPagina(elemento) {
    

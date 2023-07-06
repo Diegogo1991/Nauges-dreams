@@ -1,6 +1,6 @@
 /*window.alert('Puedes perder algo si no abres los ojos antes de que sea tarde');*/
 //prompt("Puedes perder algo si no abres los ojos antes de que sea tarde. Ingrese una fecha ?/?/23");
-/*alert('10:00 p.m.');*/
+alert('5:00 p.m.');
 
 //FUNCION MUSICA ALEATORIA
 import { funcGene } from "./functions.js";
@@ -65,7 +65,7 @@ function mostrarNovedades() {
 
    setTimeout(() => {
       pistas = new Typed('.hayNovedad', {
-         strings: [' · Tengo unas "pequeñas" confesiones al final. <br> <br> · Hay respuestas en las preguntas <br> · No te distraigas con las imagenes, están precisamente para eso.'],
+         strings: [' · Tengo unas "pequeñas" confesiones al final. <br> <br> · Hay respuestas en las preguntas <br> · No te distraigas con las imagenes, están precisamente para eso. <br> · Dreams > Hay cucarachas en la tulpa'],
          typeSpeed: 30,
          cursorChar: '',
          loop: false,
