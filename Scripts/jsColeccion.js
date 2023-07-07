@@ -1,6 +1,6 @@
-/*document.getElementById('aventador').addEventListener('click', () => {
+document.getElementById('aventador').addEventListener('click', () => {
    redireccionarPagina('Aventador')
-});*/
+});
 
 /*document.getElementById('dakota').addEventListener('click', () => {
    redireccionarPagina('Dakota')
