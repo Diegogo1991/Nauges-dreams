@@ -1,6 +1,6 @@
 //Importación función y textos
 
-import { imprimirTexto } from "../jsFuncTexto.js";
+import { imprimirTexto, imprimirTextoWord } from "../jsFuncTexto.js";
 
 import { textos } from "./textosSupra.js";
 
@@ -18,6 +18,11 @@ document.getElementById('2').addEventListener('click', () => {
 document.getElementById('3').addEventListener('click', () => {
    imprimirTexto(textos.carta3);
 });
+
+//CARTA 4
+/*document.getElementById('4').addEventListener('click', () => {
+   imprimirTextoWord('../Scripts/Supra/pruebaCrimen.docx');
+});*/
 
 
 
