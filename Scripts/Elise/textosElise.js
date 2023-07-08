@@ -1,4 +1,4 @@
-//TEXTOS para la pagina Supra
+//TEXTOS para la pagina Elise
 
 const carta1 = '';
 
