@@ -106,10 +106,6 @@ function procesarTexto(rawText) {
    // Reemplazar saltos de línea con etiquetas <br>
    var processedText = rawText.replace(/\n/g, '<br>');
 
-   // Aplicar estilos al texto según ciertas reglas
-   // Ejemplo: si el texto contiene "Rojo:", aplicar color rojo al siguiente contenido
-   processedText = processedText.replace(/Rojo:(.*?)<br>/g, '<span style="color: red;">$1</span><br>');
-
    // Puedes agregar más reglas aquí según tus necesidades
 
    return processedText;
@@ -129,3 +125,5 @@ function insertarText() {
    };
    xhr.send();
 }
+
+
