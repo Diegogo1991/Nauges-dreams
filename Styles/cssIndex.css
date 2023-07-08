@@ -79,6 +79,7 @@ html {
 #novedades {
    position: absolute;
    display: flex;
+   flex-direction: column;
    top: 20%;
    border-radius: 20px;
    width: 0%;
@@ -94,6 +95,12 @@ html {
    padding: 1rem;
    box-sizing: border-box;
    animation: novedades 2s forwards;
+}
+#novedades a{
+   display: flex;
+   width: auto;
+   height: auto;
+   color: white;
 }
 
 @keyframes novedades {
