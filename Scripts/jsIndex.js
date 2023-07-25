@@ -19,7 +19,7 @@ const typed = new Typed('.typed', {
 });
 
 const HayNove = new Typed('.aviso', {
-   strings: ['¿Hay novedades?'],
+   strings: ['He vuelto'],
    typeSpeed: 102,
    cursorChar: '',
    loop: true
