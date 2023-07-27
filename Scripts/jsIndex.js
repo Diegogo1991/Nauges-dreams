@@ -19,7 +19,7 @@ const typed = new Typed('.typed', {
 });
 
 const HayNove = new Typed('.aviso', {
-   strings: ['He vuelto'],
+   strings: ['¡He vuelto!'],
    typeSpeed: 102,
    cursorChar: '',
    loop: true
@@ -65,7 +65,7 @@ function mostrarNovedades() {
 
    setTimeout(() => {
       pistas = new Typed('.hayNovedad', {
-         strings: [' · Tengo unas "pequeñas" confesiones al final. <br> <a href="https://youtu.be/JmBM9OglVlI" target="_blank"> · Esto es un link</a> · Hay respuestas en las preguntas <br> · No te distraigas con las imagenes, están precisamente para eso. <br> · Dreams > Hay cucarachas en la tulpa'],
+         strings: [' · Tengo unas "pequeñas" confesiones al final. <br> <a href="https://youtu.be/JmBM9OglVlI" target="_blank"> · Esto es un link</a> · Hay respuestas en las preguntas <br> · No te distraigas con las imagenes, están precisamente para eso. <br> · Estoy pensando como explicar'],
          typeSpeed: 30,
          cursorChar: '',
          loop: false,
