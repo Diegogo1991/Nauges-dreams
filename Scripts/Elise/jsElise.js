@@ -16,9 +16,9 @@ import { textos } from "./textosElise.js";
 */
 
 //CARTA 3
-document.getElementById('3').addEventListener('click', () => {
+/*document.getElementById('3').addEventListener('click', () => {
    imprimirTexto(textos.carta3);
-});
+}); COMENTARIO TEMPORAL*/
 
 
 
